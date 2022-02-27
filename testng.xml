@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+<listener class-name="listeners.Listeners"/>
+</listeners>
+
+  <test name="Testing Agent Portal" preserve-order="true">
+    <classes>
+    <class name="agent.HomePageTest"/> 
+    <class name="agent.RegisterAsAnAgentTest"/> 
+   <class name="agent.PersonalInformationTest"/> 
+      <class name="agent.IdentityInformationTest"/>
+     <class name="agent.BusinessAddressTest"/> 
+      <class name="agent.ResidentialAddressTest"/> 
+      <class name="agent.GuarantorInformationTest"/>
+       <class name="agent.FormPreviewTest"/>  
+       <class name="agent.PaymentTest">
+       
+       <methods>
+       <exclude name="SuccessfulCouponPayment"/>
+       </methods>
+       
+       </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="Testing Admin Portal" preserve-order="true">
+    <classes>
+     <class name="admin.AdminLoginTest"/> 
+    <class name="admin.ForgotPasswordTest"/> 
+   <class name="admin.CouponTest"/> 
+      <class name="admin.IdentityTest"/>
+     <class name="admin.AddressTest"/> 
+      <class name="admin.PermitTest">
+      
+       <methods>
+       <exclude name="ValidateAddPermitButton"/>
+       </methods>
+       
+      </class> 
+     </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

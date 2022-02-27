@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+<listener class-name="listeners.Listeners"/>
+</listeners>
+
+  <test name="Testing Agent Portal" preserve-order="true">
+    <classes>
+   <class name="agent.PersonalInformationTest">
+   
+   <methods>
+       <include name="ValidateSuccessfulPersonalInformationForm"/>
+       </methods>
+   </class>
+   
+   
+      <class name="agent.IdentityInformationTest">
+       <methods>
+       <include name="ValidateSuccessfulIdentityInformationForm"/>
+       </methods>
+   </class>
+     <class name="agent.BusinessAddressTest"/> 
+      <class name="agent.ResidentialAddressTest"/> 
+      <class name="agent.GuarantorInformationTest"/>
+       <class name="agent.FormPreviewTest"/>  
+       <class name="agent.PaymentTest">
+       
+       <methods>
+       <include name="SuccessfulPayment"/>
+       </methods>
+       
+       </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

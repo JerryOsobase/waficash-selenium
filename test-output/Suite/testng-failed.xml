@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listeners.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Testing Agent Portal(failed)">
+    <classes>
+      <class name="agent.BusinessAddressTest">
+        <methods>
+          <include name="refreshPage"/>
+          <include name="terminate"/>
+          <include name="ValidatePreviewButton"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- agent.BusinessAddressTest -->
+      <class name="agent.FormPreviewTest">
+        <methods>
+          <include name="terminate"/>
+          <include name="initialize"/>
+          <include name="ValidateBusinessAddressEditButton"/>
+        </methods>
+      </class> <!-- agent.FormPreviewTest -->
+      <class name="agent.HomePageTest">
+        <methods>
+          <include name="ValidateRegistrationButton"/>
+          <include name="initialize"/>
+          <include name="terminate"/>
+        </methods>
+      </class> <!-- agent.HomePageTest -->
+      <class name="agent.PaymentTest">
+        <methods>
+          <include name="ValidateCouponCodeRemoval"/>
+          <include name="validCouponCode" invocation-numbers="0"/>
+          <include name="terminate"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- agent.PaymentTest -->
+    </classes>
+  </test> <!-- Testing Agent Portal(failed) -->
+  <test thread-count="5" name="Testing Admin Portal(failed)">
+    <classes>
+      <class name="admin.ForgotPasswordTest">
+        <methods>
+          <include name="ValidateForgotPasswordLink" invocation-numbers="1"/>
+          <include name="initialize"/>
+          <include name="terminate"/>
+        </methods>
+      </class> <!-- admin.ForgotPasswordTest -->
+      <class name="admin.AddressTest">
+        <methods>
+          <include name="ValidateAddressListHeader"/>
+          <include name="terminate"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- admin.AddressTest -->
+      <class name="admin.IdentityTest">
+        <methods>
+          <include name="ValidateIdentityCardResponse"/>
+          <include name="initialize"/>
+          <include name="terminate"/>
+        </methods>
+      </class> <!-- admin.IdentityTest -->
+    </classes>
+  </test> <!-- Testing Admin Portal(failed) -->
+</suite> <!-- Failed suite [Suite] -->
