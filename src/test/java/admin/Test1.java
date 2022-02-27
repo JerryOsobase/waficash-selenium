@@ -223,8 +223,7 @@ public class Test1 extends base{
 	
 	@Test
 	public void sjfie() {
-		CouponTest	ct = new CouponTest();
-		System.out.println("Trade" + ct.setCouponCode());
+		System.out.println("boy boy");
 		}
 	
 	
