@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-25T14:09:01 WAT" name="Default suite" finished-at="2022-02-25T14:09:25 WAT" duration-ms="24379">
+  <suite started-at="2022-02-28T14:47:59 WAT" name="Default suite" finished-at="2022-02-28T14:48:47 WAT" duration-ms="48060">
     <groups>
     </groups>
-    <test started-at="2022-02-25T14:09:01 WAT" name="Default test" finished-at="2022-02-25T14:09:25 WAT" duration-ms="24379">
+    <test started-at="2022-02-28T14:47:59 WAT" name="Default test" finished-at="2022-02-28T14:48:47 WAT" duration-ms="48060">
       <class name="admin.ProfileTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:admin.ProfileTest@36916eb0]" started-at="2022-02-25T14:09:01 WAT" name="initialize" finished-at="2022-02-25T14:09:17 WAT" duration-ms="16773" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:47:59 WAT" name="initialize" finished-at="2022-02-28T14:48:13 WAT" duration-ms="13455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="ValidateProfilePage(java.util.HashMap)[pri:1, instance:admin.ProfileTest@36916eb0]" started-at="2022-02-25T14:09:17 WAT" name="ValidateProfilePage" data-provider="mergedData" finished-at="2022-02-25T14:09:24 WAT" duration-ms="6262" status="PASS">
+        <test-method signature="ValidateProfilePage(java.util.HashMap)[pri:1, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:13 WAT" name="ValidateProfilePage" data-provider="mergedData" finished-at="2022-02-28T14:48:19 WAT" duration-ms="6175" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=bimec37232@naluzotan.com, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
+                <![CDATA[{emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=bimec37232@naluzotan.com, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateProfilePage -->
-        <test-method signature="InvalidPhoneNumberFormat(java.util.HashMap)[pri:7, instance:admin.ProfileTest@36916eb0]" started-at="2022-02-25T14:09:24 WAT" name="InvalidPhoneNumberFormat" data-provider="invalidGetData" finished-at="2022-02-25T14:09:24 WAT" duration-ms="277" status="PASS">
+        <test-method signature="ValidateProfileInformation()[pri:2, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:19 WAT" name="ValidateProfileInformation" finished-at="2022-02-28T14:48:19 WAT" duration-ms="375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateProfileInformation -->
+        <test-method signature="ValidateProfileImageUpload()[pri:3, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:19 WAT" name="ValidateProfileImageUpload" finished-at="2022-02-28T14:48:23 WAT" duration-ms="4161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateProfileImageUpload -->
+        <test-method signature="ValidateFirstNameEdit()[pri:4, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:23 WAT" name="ValidateFirstNameEdit" finished-at="2022-02-28T14:48:27 WAT" duration-ms="3909" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateFirstNameEdit -->
+        <test-method signature="ValidateLastNameEdit()[pri:5, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:27 WAT" name="ValidateLastNameEdit" finished-at="2022-02-28T14:48:31 WAT" duration-ms="3774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateLastNameEdit -->
+        <test-method signature="ValidatePhoneNumberEdit()[pri:6, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:31 WAT" name="ValidatePhoneNumberEdit" finished-at="2022-02-28T14:48:38 WAT" duration-ms="6616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatePhoneNumberEdit -->
+        <test-method signature="InvalidPhoneNumberFormat(java.util.HashMap)[pri:7, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:38 WAT" name="InvalidPhoneNumberFormat" data-provider="invalidGetData" finished-at="2022-02-28T14:48:38 WAT" duration-ms="100" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidPhoneNumberFormat -->
-        <test-method signature="InvalidPhoneNumberFormat(java.util.HashMap)[pri:7, instance:admin.ProfileTest@36916eb0]" started-at="2022-02-25T14:09:24 WAT" name="InvalidPhoneNumberFormat" data-provider="invalidGetData" finished-at="2022-02-25T14:09:25 WAT" duration-ms="985" status="PASS">
+        <test-method signature="InvalidPhoneNumberFormat(java.util.HashMap)[pri:7, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:38 WAT" name="InvalidPhoneNumberFormat" data-provider="invalidGetData" finished-at="2022-02-28T14:48:38 WAT" duration-ms="68" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,6 +64,63 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidPhoneNumberFormat -->
+        <test-method signature="ValidateGenderEdit()[pri:8, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:38 WAT" name="ValidateGenderEdit" finished-at="2022-02-28T14:48:38 WAT" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateGenderEdit -->
+        <test-method signature="ValidateEmailAddressEdit()[pri:9, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:38 WAT" name="ValidateEmailAddressEdit" finished-at="2022-02-28T14:48:38 WAT" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateEmailAddressEdit -->
+        <test-method signature="ValidateConFirmPasswordField()[pri:10, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:38 WAT" name="ValidateConFirmPasswordField" finished-at="2022-02-28T14:48:39 WAT" duration-ms="715" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateConFirmPasswordField -->
+        <test-method signature="ValidatePasswordTips()[pri:11, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:39 WAT" name="ValidatePasswordTips" finished-at="2022-02-28T14:48:40 WAT" duration-ms="846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatePasswordTips -->
+        <test-method signature="EmptyCurrentPasswordField()[pri:12, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:40 WAT" name="EmptyCurrentPasswordField" finished-at="2022-02-28T14:48:40 WAT" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmptyCurrentPasswordField -->
+        <test-method signature="ValidateNewPasswordMatch(java.util.HashMap)[pri:13, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:40 WAT" name="ValidateNewPasswordMatch" data-provider="mergedData" finished-at="2022-02-28T14:48:40 WAT" duration-ms="327" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=bimec37232@naluzotan.com, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateNewPasswordMatch -->
+        <test-method signature="InvalidCurrentPassword(java.util.HashMap)[pri:14, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:40 WAT" name="InvalidCurrentPassword" data-provider="invalidGetData" finished-at="2022-02-28T14:48:44 WAT" duration-ms="3375" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, invalidPassword=OSOBASE4@, invalidMultipleCouponQuantity=0, invalidEmailResetPassword=jtest@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidCurrentPassword -->
+        <test-method signature="InvalidCurrentPassword(java.util.HashMap)[pri:14, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:44 WAT" name="InvalidCurrentPassword" data-provider="invalidGetData" finished-at="2022-02-28T14:48:47 WAT" duration-ms="3495" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{emailNotFound=justinbieber@gmail.com, invalidEmailAddress=jerrygmail.com, invalidPassword=tesTing##, invalidMultipleCouponQuantity=1, invalidEmailResetPassword=jtest+001@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidCurrentPassword -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:admin.ProfileTest@47d9a273]" started-at="2022-02-28T14:48:47 WAT" name="terminate" finished-at="2022-02-28T14:48:47 WAT" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
       </class> <!-- admin.ProfileTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

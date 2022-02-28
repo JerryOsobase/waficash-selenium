@@ -164,7 +164,7 @@ public class AdminLoginTest extends base {
 		Map <String, String> dp2= new HashMap <>(invalidData);
 		
 		Map<String, String> invalidData1 = Map.of("emailNotFound","justinbieber@gmail.com", "invalidEmailAddress", "jerrygmail.com", 
-				"invalidPassword", "OSOBASE4@", "invalidEmailResetPassword", "jtest+001@gmail.com", "invalidMultipleCouponQuantity", "1");
+				"invalidPassword", "tesTing##", "invalidEmailResetPassword", "jtest+001@gmail.com", "invalidMultipleCouponQuantity", "1");
 		Map <String, String> dp6= new HashMap <>(invalidData1);
 	
 		data2[0]= new Object[] { dp2 };

@@ -5,8 +5,9 @@
     <classes>
       <class name="admin.ProfileTest">
         <methods>
+          <include name="terminate"/>
           <include name="initialize"/>
-          <include name="ValidatePhoneNumberEdit"/>
+          <include name="InvalidCurrentPassword" invocation-numbers="1"/>
         </methods>
       </class> <!-- admin.ProfileTest -->
     </classes>

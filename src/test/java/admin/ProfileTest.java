@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -50,7 +51,7 @@ public class ProfileTest extends base {
 		
 	}
 	
-	/*@Test(priority=2)
+	@Test(priority=2)
 	public void ValidateProfileInformation() {
 		//Verify user can view the following on the profile page; (User profile picture, First name, Middle name, Last name, Phone number, Gender, Email, Role, Change password button, Save changes button)
 		sm = new SideMenu(driver);
@@ -149,17 +150,126 @@ public class ProfileTest extends base {
 			 		+ "User profile updated successfully");
 		soft.assertEquals(pr.getPhoneNumberField().getAttribute("value"), phoneNumber1); 
 		soft.assertAll();
-	}*/
+	}
 	
 	@Test(priority=7, dataProvider="invalidGetData", dataProviderClass=RegisterAsAnAgentTest.class)
 	public void InvalidPhoneNumberFormat(HashMap<String, String> data) {
-		//Check system response when user input a wrong phone number format (i.e less or more than 11 numbers, alphabet or special characters)
-		sm = new SideMenu(driver);
-		soft = new  SoftAssert();
+		//Check system response when user input a wrong phone number format 
+		  sm = new SideMenu(driver);
 		 pr = new Profile(driver);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		 executor.executeScript("arguments[0].click();", sm.getProfile());
 		 pr.getPhoneNumberField().sendKeys(Keys.chord(Keys.COMMAND,"a"), data.get("Invalidphonenumber"));
 		 Assert.assertFalse(pr.getSaveChanges().isEnabled());
+	}
+	
+	@Test(priority=8)
+	public void ValidateGenderEdit() {
+		//Verify user is unable to edit Gender
+		 sm = new SideMenu(driver);
+			soft = new  SoftAssert();
+			 pr = new Profile(driver);
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			 executor.executeScript("arguments[0].click();", sm.getProfile());
+			Assert.assertFalse(pr.getGenderField().isEnabled());
+	}
+	
+	@Test(priority=9)
+	public void ValidateEmailAddressEdit() throws InterruptedException {
+		//Verify user is unable to edit email address
+		 sm = new SideMenu(driver);
+			 pr = new Profile(driver);
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			 executor.executeScript("arguments[0].click();", sm.getProfile());
+			Assert.assertTrue(pr.getEmailAddressField().getAttribute("readOnly").equals("true"));
+	}
+	
+	@Test(priority=10)
+	public void ValidateConFirmPasswordField() {
+		//Verify user is unable to view the Confirm password Field if user has not inputted a valid new password
+		sm = new SideMenu(driver);
+		soft = new  SoftAssert();
+		 pr = new Profile(driver);
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		 executor.executeScript("arguments[0].click();", sm.getProfile());
+		 pr.getChangePassword().click();
+		 Assert.assertFalse(pr.getConfirmPasswordField().isDisplayed());
+		 executor.executeScript("arguments[0].click();", pr.getPopUpCloseButton());
+	}
+	
+	@Test(priority=11)
+	public void ValidatePasswordTips() {
+		//Check system response when user start typing on the New password field
+		sm = new SideMenu(driver);
+		 pr = new Profile(driver);
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		 executor.executeScript("arguments[0].click();", sm.getProfile());
+		 pr.getChangePassword().click();
+		 pr.getNewPasswordField().sendKeys("te");
+		 List<String> originalpasswordTips= pr.getPasswordTips().stream().map(a->a.getText()).collect(Collectors.toList());
+			String[] expectedpasswordTips= {"One lowercase letter", "One uppercase letter", 
+					"One special character (allowed characters ! @ # $ % ^ & _ -)", "One number", "Eight characters"};
+				List<String> expectedHeaderArray= Arrays.asList(expectedpasswordTips);
+				Assert.assertEquals(originalpasswordTips, expectedHeaderArray);
+				executor.executeScript("arguments[0].click();", pr.getPopUpCloseButton());
+	}
+	
+	@Test(priority=12)
+	public void EmptyCurrentPasswordField() {
+		//Verify user is unable to change password if the current password field is empty
+		sm = new SideMenu(driver);
+		 pr = new Profile(driver);
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		 executor.executeScript("arguments[0].click();", sm.getProfile());
+		 executor.executeScript("arguments[0].click();", pr.getChangePassword());
+		 pr.getNewPasswordField().sendKeys(Keys.chord(Keys.COMMAND, "a"), "Testing4@");
+		 pr.getConfirmPasswordField().sendKeys(Keys.chord(Keys.COMMAND, "a"), "Testing4@");
+		 Assert.assertFalse(pr.getPopUpChangePassword().isEnabled());
+		 executor.executeScript("arguments[0].click();", pr.getPopUpCloseButton());
+	}
+	
+	@Test(priority=13, dataProvider="mergedData", dataProviderClass=AdminLoginTest.class)
+	public void ValidateNewPasswordMatch(HashMap<String, String> data) {
+		//Check system response if the new and confirm password does not match
+		sm = new SideMenu(driver);
+		 pr = new Profile(driver);
+		 soft = new SoftAssert();
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		 executor.executeScript("arguments[0].click();", sm.getProfile());
+		 executor.executeScript("arguments[0].click();", pr.getChangePassword());
+		 pr.getCurrentPasswordField().sendKeys(data.get("password"));
+		 pr.getNewPasswordField().sendKeys("Testing4@");
+		 soft.assertFalse(pr.getPopUpChangePassword().isEnabled());
+		 pr.getConfirmPasswordField().sendKeys("Testing4");
+		soft.assertEquals(pr.getConfirmPasswordField().findElement(By.xpath
+				("following-sibling::p")).getText(), "Must be the same as new password");
+		soft.assertFalse(pr.getPopUpChangePassword().isEnabled());
+		soft.assertAll();	 
+		executor.executeScript("arguments[0].click();", pr.getPopUpCloseButton());
+	}
+	
+	@Test(priority=14, dataProvider="invalidGetData", dataProviderClass=AdminLoginTest.class)
+	public void InvalidCurrentPassword(HashMap<String, String> data) throws InterruptedException {
+		//Check system response when user input a wrong current password
+		sm = new SideMenu(driver);
+		 pr = new Profile(driver);
+		 soft = new SoftAssert();
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		 executor.executeScript("arguments[0].click();", sm.getProfile());
+		 executor.executeScript("arguments[0].click();", pr.getChangePassword());
+		 pr.getNewPasswordField().sendKeys(Keys.chord(Keys.COMMAND, "a"), "Testing4@");
+		 pr.getConfirmPasswordField().sendKeys(Keys.chord(Keys.COMMAND, "a"), "Testing4@");
+		 pr.getCurrentPasswordField().sendKeys(Keys.chord(Keys.COMMAND, "a"), data.get("invalidPassword"));
+		 pr.getPopUpChangePassword().click();
+		 Thread.sleep(3000);
+		soft.assertEquals(pr.getPromptMessage().getText(), "Error\n"
+				+ "Current password does not match");
+		soft.assertAll();
+		 executor.executeScript("arguments[0].click();", pr.getPopUpCloseButton());
+	}
+	
+	@AfterClass
+	public void terminate() {
+		driver.close();
 	}
 }

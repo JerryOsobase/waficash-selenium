@@ -26,19 +26,33 @@ public WebDriver driver;
 	private By phoneNumberField= By.id("phone-number"); 
 	private By genderField= By.xpath("//select");
 	private By emailAddressField= By.id("email-address"); 
-	private By changePassword= By.xpath("//button[text()=' Change Password ']"); 
+	private By changePassword= By.xpath("//div[@class='form-group m-b-10'] //button[text()=' Change Password ']"); 
 	private By currentPasswordField= By.id("user-password-c"); 
 	private By newPasswordField= By.id("user-password-new");
-	private By popUpCloseButton = By.cssSelector("button.close"); 
+	private By confirmPasswordField= By.id("user-password-confirm");
+	private By popUpChangePassword= By.xpath("//div[@id='change-password-modal'] //button[text()=' Change Password ']"); 
+	private By popUpCloseButton = By.cssSelector("div[id='change-password-modal'] button.close"); 
 	private By fieldLabel= By.cssSelector("label[class*='font-bold form-label']");
 	private By saveChanges= By.xpath("//button[text()=' Save Changes ']");
 	private By image= By.xpath("//div[@class='dropify-wrapper has-preview'] //img");
 	private By dropDownImage= By.xpath("//li[@class='nav-item dropdown'] //img");
 	private By PromptMessage= By.cssSelector("div.iziToast-texts");
-	
+	private By passwordTips= By.xpath("//ul[@class='list-unstyled'] /li");
 	
 	public WebElement getDropDownImage() {
 		return driver.findElement(dropDownImage);
+	}
+	
+	public List<WebElement> getPasswordTips() {
+		return driver.findElements(passwordTips);
+	}
+	
+	public WebElement getConfirmPasswordField() {
+		return driver.findElement(confirmPasswordField);
+	}
+	
+	public WebElement getPopUpChangePassword() {
+		return driver.findElement(popUpChangePassword);
 	}
 	
 	public WebElement getProfilePicUpload() {
@@ -65,6 +79,9 @@ public WebDriver driver;
 	}
 	
 	public WebElement getPopUpCloseButton() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.elementToBeClickable(popUpCloseButton));
 		return driver.findElement(popUpCloseButton);
 	}
 	
@@ -77,6 +94,9 @@ public WebDriver driver;
 	}
 	
 	public WebElement getChangePassword() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.elementToBeClickable(changePassword));
 		return driver.findElement(changePassword);
 	}
 	

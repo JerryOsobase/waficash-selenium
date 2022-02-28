@@ -39,8 +39,9 @@
        <methods>
        <exclude name="ValidateAddPermitButton"/>
        </methods>
-       
       </class> 
+      <class name="admin.CompaniesTest"/> 
+      <class name="admin.ProfileTest"/> 
      </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
