@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="admin.ProfileTest">
+      <class name="admin.TransactionsTest">
         <methods>
+          <include name="ValidateInitiatedStatusTransactions"/>
           <include name="terminate"/>
           <include name="initialize"/>
-          <include name="InvalidCurrentPassword" invocation-numbers="1"/>
         </methods>
-      </class> <!-- admin.ProfileTest -->
+      </class> <!-- admin.TransactionsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

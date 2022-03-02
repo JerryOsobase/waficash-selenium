@@ -269,7 +269,7 @@ public class CouponTest extends base {
 	}
 	
 	@Test(priority=15)
-	public void SuccessfulSingleCouponRequest() throws InterruptedException {
+	public void SuccessfulSingleCouponRequestOnline() throws InterruptedException {
 		//Verify user can request a single coupon
 		sm = new SideMenu(driver);
 		c = new Coupon(driver);
@@ -305,7 +305,7 @@ public class CouponTest extends base {
 	}
 	
 	@Test(priority=16)
-	public void SuccessfulMultipleCouponRequest() throws InterruptedException {
+	public void SuccessfulMultipleCouponRequestOnline() throws InterruptedException {
 		//Verify user can request a multiple coupons
 				sm = new SideMenu(driver);
 				c = new Coupon(driver);
@@ -700,5 +700,56 @@ public class CouponTest extends base {
 			}
 		}
 		}
+	}
+	
+	public void SuccessfulSingleCouponRequestBank(WebDriver driver) throws InterruptedException {
+		//Single Coupon request using bank transfer
+		sm = new SideMenu(driver);
+		c = new Coupon(driver);
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		 executor.executeScript("arguments[0].click();", sm.getCoupon());
+				Select couponDropDown = new Select(c.getCategoryRequestCoupon());
+				couponDropDown.selectByVisibleText("Single");
+				ct = new CouponTest();
+				c.getCouponCodeField().sendKeys(Keys.chord(Keys.COMMAND, "a"), ct.setCouponCode());
+				ct.setStartDate(driver);
+				ct.setEndDate(driver);
+				Select discountDropDown = new Select(c.getDiscountTypeField());
+				discountDropDown.selectByValue("percent");
+				c.getDiscountValueField().sendKeys(Keys.chord(Keys.COMMAND, "a"), "100");
+				c.getAgentNameField().sendKeys("jerry");
+				Thread.sleep(3000);
+				for(WebElement agentList : c.getAgentFieldDropdown()) {
+					if(agentList.getText().contains("batocox")) {
+						agentList.click();
+						break;
+					}
+				}
+			c.getQuotationButton().click();
+			c.getPopUpRequestButton().click();
+			c.getPaymentMode().stream().filter(v->v.getText().equalsIgnoreCase("bank transfer")).findAny().get().click();
+			c.getPopUpRequestButton().click();
+	}
+	
+	public void SuccessfulMultipleCouponRequestBank(WebDriver driver) throws InterruptedException {
+		//Single Coupon request using bank transfer
+		sm = new SideMenu(driver);
+		c = new Coupon(driver);
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		 executor.executeScript("arguments[0].click();", sm.getCoupon());
+				Select couponDropDown = new Select(c.getCategoryRequestCoupon());
+				couponDropDown.selectByVisibleText("Multiple");
+				c.getQuantityField().sendKeys(Keys.chord(Keys.COMMAND, "a"), "5");
+				ct = new CouponTest();
+				c.getCouponCodeField().sendKeys(Keys.chord(Keys.COMMAND, "a"), ct.setCouponCode());
+				ct.setStartDate(driver);
+				ct.setEndDate(driver);
+				Select discountDropDown = new Select(c.getDiscountTypeField());
+				discountDropDown.selectByValue("percent");
+				c.getDiscountValueField().sendKeys(Keys.chord(Keys.COMMAND, "a"), "100");
+			c.getQuotationButton().click();
+			c.getPopUpRequestButton().click();
+			c.getPaymentMode().stream().filter(v->v.getText().equalsIgnoreCase("bank transfer")).findAny().get().click();
+			c.getPopUpRequestButton().click();
 	}
 }

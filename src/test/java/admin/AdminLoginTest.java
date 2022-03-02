@@ -145,11 +145,12 @@ public class AdminLoginTest extends base {
 		Object[][] data1=new Object[2][];
 		Map<String, String> validData = Map.of("emailAddress", "base4jerry@gmail.com", "password", "Osobase4@", "agentNoCoupon", "jtest@gmail.com", 
 				"lga", "Amuwo-Odofin LGA", "permitName", "test", "companyEmail", "bimec37232@naluzotan.com",
-				"companyPhoneNumber", "84948940303");
+				"companyPhoneNumber", "84948940303", "singleCoupon", "12500", "multipleCoupon", "62500", 
+				"agentsearch", "Jerry");
 		Map <String, String> dp1= new HashMap <>(validData);
 		Map<String, String> validData1 = Map.of("emailAddress", "base4jerry@gmail.com", "password", "Osobase4@", "agentNoCoupon", "jtest@gmail.com", 
 				"lga", "Yaba LCDA", "permitName", "online", "companyEmail", "nohak11ab195@naluzotan.com", 
-				"companyPhoneNumber", "84948940399");
+				"companyPhoneNumber", "84948940399", "singleCoupon", "12500", "multipleCoupon", "62500", "agentsearch", "Chioma");
 		Map <String, String> dp3= new HashMap <>(validData1);
 		data1[0]= new Object[] { dp1 };
 		data1[1]= new Object[] { dp3 };

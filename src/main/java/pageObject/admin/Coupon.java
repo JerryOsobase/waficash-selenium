@@ -52,9 +52,25 @@ public WebDriver driver;
 	private By clearButton= By.xpath("//button[text()=' clear filter ']"); 
 	private By generatedListHeader= By.xpath("//tr/th"); 
 	private By couponDetails= By.xpath("//div[@class='col-xs-12']");
+	private By paymentMode= By.cssSelector("label[class*='radio']");
+	private By bankTransferMessage= By.cssSelector("div[id='get-coupon-quotation-modal'] div[class*='alert'] div");
+	private By popUpCloseButton = By.cssSelector("div[id='get-coupon-quotation-modal'] button.close"); 
+	
 	
 	public WebElement getAgentSearchBar() {
 		return driver.findElement(agentSearchBar);
+	}
+	
+	public WebElement getPopUpCloseButton() {
+		return driver.findElement(popUpCloseButton);
+	}
+	
+	public WebElement getBankTransferMessage() {
+		return driver.findElement(bankTransferMessage);
+	}
+	
+	public List<WebElement> getPaymentMode() {
+		return driver.findElements(paymentMode);
 	}
 	
 	public List<WebElement> getCouponDetails() {

@@ -42,6 +42,7 @@
       </class> 
       <class name="admin.CompaniesTest"/> 
       <class name="admin.ProfileTest"/> 
+      <class name="admin.TransactionTest"/> 
      </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
