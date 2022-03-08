@@ -247,7 +247,7 @@ public class TransactionsTest extends base{
 		 Select statusDropdown = new Select(tr.getStatusField());
 		 statusDropdown.selectByVisibleText("All");
 		 tr.getFilterButton().click();
-		 Thread.sleep(3000);
+		 Thread.sleep(5000);
 		 String splitter[]= tr.getTableFooterText().getText().split("of");
 			long count =  tr.getStatus().stream().count();
 			do {

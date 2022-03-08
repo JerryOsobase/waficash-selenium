@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="admin.TransactionsTest">
+      <class name="admin.AuditLogTest">
         <methods>
-          <include name="ValidateInitiatedStatusTransactions"/>
-          <include name="terminate"/>
           <include name="initialize"/>
+          <include name="ValidateAuditLogCardResponse"/>
         </methods>
-      </class> <!-- admin.TransactionsTest -->
+      </class> <!-- admin.AuditLogTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

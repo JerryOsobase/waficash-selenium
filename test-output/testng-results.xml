@@ -1,224 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="28" passed="28" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-02T19:31:06 WAT" name="Default suite" finished-at="2022-03-02T19:39:29 WAT" duration-ms="503972">
+  <suite started-at="2022-03-08T18:01:50 WAT" name="Default suite" finished-at="2022-03-08T18:03:00 WAT" duration-ms="69744">
     <groups>
     </groups>
-    <test started-at="2022-03-02T19:31:06 WAT" name="Default test" finished-at="2022-03-02T19:39:29 WAT" duration-ms="503972">
-      <class name="admin.TransactionsTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:31:06 WAT" name="initialize" finished-at="2022-03-02T19:31:24 WAT" duration-ms="18235" status="PASS">
+    <test started-at="2022-03-08T18:01:50 WAT" name="Default test" finished-at="2022-03-08T18:03:00 WAT" duration-ms="69744">
+      <class name="admin.AuditLogTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:01:50 WAT" name="initialize" finished-at="2022-03-08T18:02:13 WAT" duration-ms="22742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="ValidateTransactionsPage(java.util.HashMap)[pri:1, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:31:24 WAT" name="ValidateTransactionsPage" data-provider="mergedData" finished-at="2022-03-02T19:31:32 WAT" duration-ms="7710" status="PASS">
+        <test-method signature="ValidateAuditLoginPage(java.util.HashMap)[pri:1, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:13 WAT" name="ValidateAuditLoginPage" data-provider="mergedData" finished-at="2022-03-08T18:02:20 WAT" duration-ms="6722" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=bimec37232@naluzotan.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
+                <![CDATA[{invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=kagefe1978@ketchet.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateTransactionsPage -->
-        <test-method signature="ValidateSingleCouponRequestReconcilationAdmin(java.util.HashMap)[pri:2, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:31:32 WAT" name="ValidateSingleCouponRequestReconcilationAdmin" data-provider="mergedData" finished-at="2022-03-02T19:31:47 WAT" duration-ms="15536" status="PASS">
+        </test-method> <!-- ValidateAuditLoginPage -->
+        <test-method signature="ValidateLogListHeader()[pri:2, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:20 WAT" name="ValidateLogListHeader" finished-at="2022-03-08T18:02:20 WAT" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateLogListHeader -->
+        <test-method signature="ValidateUserSearchField(java.util.HashMap)[pri:3, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:20 WAT" name="ValidateUserSearchField" data-provider="getData" finished-at="2022-03-08T18:02:28 WAT" duration-ms="8138" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=bimec37232@naluzotan.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
+                <![CDATA[{usersearch=Osobase}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateSingleCouponRequestReconcilationAdmin -->
-        <test-method signature="ValidateMultipleCouponRequestReconcilationAdmin(java.util.HashMap)[pri:3, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:31:47 WAT" name="ValidateMultipleCouponRequestReconcilationAdmin" data-provider="mergedData" finished-at="2022-03-02T19:31:59 WAT" duration-ms="11496" status="PASS">
+        </test-method> <!-- ValidateUserSearchField -->
+        <test-method signature="ValidateUserSearchField(java.util.HashMap)[pri:3, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:28 WAT" name="ValidateUserSearchField" data-provider="getData" finished-at="2022-03-08T18:02:36 WAT" duration-ms="7965" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=bimec37232@naluzotan.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
+                <![CDATA[{usersearch=Seyi}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateMultipleCouponRequestReconcilationAdmin -->
-        <test-method signature="ValidateTransactionsListHeader()[pri:4, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:31:59 WAT" name="ValidateTransactionsListHeader" finished-at="2022-03-02T19:31:59 WAT" duration-ms="127" status="PASS">
+        </test-method> <!-- ValidateUserSearchField -->
+        <test-method signature="ValidateEventFieldDropDownList()[pri:4, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:36 WAT" name="ValidateEventFieldDropDownList" finished-at="2022-03-08T18:02:36 WAT" duration-ms="295" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateTransactionsListHeader -->
-        <test-method signature="ValidateSearchBar(java.util.HashMap)[pri:5, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:31:59 WAT" name="ValidateSearchBar" data-provider="getData" finished-at="2022-03-02T19:32:08 WAT" duration-ms="9471" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{emailAddress=base4jerry@gmail.com, password=Osobase4@, singleCoupon=12500, permitName=test, companyEmail=bimec37232@naluzotan.com, lga=Amuwo-Odofin LGA, multipleCoupon=62500, companyPhoneNumber=84948940303, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- ValidateEventFieldDropDownList -->
+        <test-method signature="ValidateAuditLogCardResponse()[pri:5, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:36 WAT" name="ValidateAuditLogCardResponse" finished-at="2022-03-08T18:03:00 WAT" duration-ms="23523" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateSearchBar -->
-        <test-method signature="ValidateSearchBar(java.util.HashMap)[pri:5, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:32:08 WAT" name="ValidateSearchBar" data-provider="getData" finished-at="2022-03-02T19:32:18 WAT" duration-ms="9459" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{emailAddress=base4jerry@gmail.com, password=Osobase4@, singleCoupon=12500, permitName=online, companyEmail=nohak11ab195@naluzotan.com, lga=Yaba LCDA, multipleCoupon=62500, companyPhoneNumber=84948940399, agentNoCoupon=jtest@gmail.com, agentsearch=Chioma}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateSearchBar -->
-        <test-method signature="ValidateStatusDropdownList()[pri:6, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:32:18 WAT" name="ValidateStatusDropdownList" finished-at="2022-03-02T19:32:18 WAT" duration-ms="129" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateStatusDropdownList -->
-        <test-method signature="ValidateAllStatusField()[pri:7, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:32:18 WAT" name="ValidateAllStatusField" finished-at="2022-03-02T19:34:09 WAT" duration-ms="111200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateAllStatusField -->
-        <test-method signature="ValidateInitiatedStatusField()[pri:8, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:34:09 WAT" name="ValidateInitiatedStatusField" finished-at="2022-03-02T19:34:45 WAT" duration-ms="36261" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateInitiatedStatusField -->
-        <test-method signature="ValidateAbandonedStatusField()[pri:9, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:34:45 WAT" name="ValidateAbandonedStatusField" finished-at="2022-03-02T19:35:05 WAT" duration-ms="19885" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateAbandonedStatusField -->
-        <test-method signature="ValidateSuccessStatusField()[pri:10, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:35:05 WAT" name="ValidateSuccessStatusField" finished-at="2022-03-02T19:36:14 WAT" duration-ms="69307" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateSuccessStatusField -->
-        <test-method signature="ValidateFailedStatusField()[pri:11, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:36:14 WAT" name="ValidateFailedStatusField" finished-at="2022-03-02T19:36:33 WAT" duration-ms="18289" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateFailedStatusField -->
-        <test-method signature="ValidateReversedStatusField()[pri:12, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:36:33 WAT" name="ValidateReversedStatusField" finished-at="2022-03-02T19:36:51 WAT" duration-ms="18219" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateReversedStatusField -->
-        <test-method signature="ValidateDeclinedStatusField()[pri:13, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:36:51 WAT" name="ValidateDeclinedStatusField" finished-at="2022-03-02T19:37:09 WAT" duration-ms="18131" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateDeclinedStatusField -->
-        <test-method signature="ValidateFraudStatusField()[pri:14, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:37:09 WAT" name="ValidateFraudStatusField" finished-at="2022-03-02T19:37:27 WAT" duration-ms="18182" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateFraudStatusField -->
-        <test-method signature="ValidateInitiatedStatusTransactions()[pri:15, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:37:27 WAT" name="ValidateInitiatedStatusTransactions" finished-at="2022-03-02T19:37:57 WAT" duration-ms="29393" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateInitiatedStatusTransactions -->
-        <test-method signature="ValidateSuccessTransactionPaymentStatus()[pri:16, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:37:57 WAT" name="ValidateSuccessTransactionPaymentStatus" finished-at="2022-03-02T19:38:00 WAT" duration-ms="3663" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateSuccessTransactionPaymentStatus -->
-        <test-method signature="ValidateInitiatedTransactionPaymentStatus()[pri:17, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:00 WAT" name="ValidateInitiatedTransactionPaymentStatus" finished-at="2022-03-02T19:38:04 WAT" duration-ms="3602" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateInitiatedTransactionPaymentStatus -->
-        <test-method signature="ValidateAbandonedTransactionPaymentStatus()[pri:18, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:04 WAT" name="ValidateAbandonedTransactionPaymentStatus" finished-at="2022-03-02T19:38:08 WAT" duration-ms="3728" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateAbandonedTransactionPaymentStatus -->
-        <test-method signature="ValidateCsvExport(java.lang.String)[pri:19, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:08 WAT" name="ValidateCsvExport" data-provider="getData" finished-at="2022-03-02T19:38:14 WAT" duration-ms="6171" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Declined]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateCsvExport -->
-        <test-method signature="ValidateCsvExport(java.lang.String)[pri:19, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:14 WAT" name="ValidateCsvExport" data-provider="getData" finished-at="2022-03-02T19:38:20 WAT" duration-ms="6151" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Initiated]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateCsvExport -->
-        <test-method signature="ValidateCsvExport(java.lang.String)[pri:19, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:20 WAT" name="ValidateCsvExport" data-provider="getData" finished-at="2022-03-02T19:38:26 WAT" duration-ms="6159" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Success]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateCsvExport -->
-        <test-method signature="ValidateCsvExport(java.lang.String)[pri:19, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:26 WAT" name="ValidateCsvExport" data-provider="getData" finished-at="2022-03-02T19:38:32 WAT" duration-ms="6170" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Abandoned]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateCsvExport -->
-        <test-method signature="ValidateCsvExport(java.lang.String)[pri:19, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:32 WAT" name="ValidateCsvExport" data-provider="getData" finished-at="2022-03-02T19:38:39 WAT" duration-ms="6174" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Reversed]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateCsvExport -->
-        <test-method signature="ValidateCsvExport(java.lang.String)[pri:19, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:39 WAT" name="ValidateCsvExport" data-provider="getData" finished-at="2022-03-02T19:38:45 WAT" duration-ms="6131" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Failed]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateCsvExport -->
-        <test-method signature="ValidateCsvExport(java.lang.String)[pri:19, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:45 WAT" name="ValidateCsvExport" data-provider="getData" finished-at="2022-03-02T19:38:51 WAT" duration-ms="6150" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Fraud]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateCsvExport -->
-        <test-method signature="ValidateCsvExport(java.lang.String)[pri:19, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:51 WAT" name="ValidateCsvExport" data-provider="getData" finished-at="2022-03-02T19:38:57 WAT" duration-ms="6145" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[All]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateCsvExport -->
-        <test-method signature="ValidateTransactionCardResponse()[pri:20, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:38:57 WAT" name="ValidateTransactionCardResponse" finished-at="2022-03-02T19:39:29 WAT" duration-ms="32325" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateTransactionCardResponse -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:admin.TransactionsTest@7d4f9aae]" started-at="2022-03-02T19:39:29 WAT" name="terminate" finished-at="2022-03-02T19:39:29 WAT" duration-ms="129" status="PASS">
+        </test-method> <!-- ValidateAuditLogCardResponse -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:03:00 WAT" name="terminate" finished-at="2022-03-08T18:03:00 WAT" duration-ms="161" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminate -->
-      </class> <!-- admin.TransactionsTest -->
+      </class> <!-- admin.AuditLogTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

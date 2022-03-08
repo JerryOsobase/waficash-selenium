@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -224,7 +225,7 @@ public class CompaniesTest extends base{
 	}
 	
 	@Test(priority=11, dataProvider="mergedData", dataProviderClass=AdminLoginTest.class)
-	public void EmptyPhoneNumberField(HashMap<String, String> data) {
+	public void EmptyPhoneNumberField(HashMap<String, String> data) throws InterruptedException {
 		//Verify user is unable to invite company if the phonenumber field is empty
 		 co = new Companies(driver);
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -241,15 +242,16 @@ public class CompaniesTest extends base{
 			 co.getPhoneNumberField().sendKeys(Keys.chord(Keys.COMMAND,"a"), Keys.chord(Keys.DELETE));
 			 Assert.assertFalse(co.getInviteNewCompanyButton().isEnabled());
 			 co.getPopUpCloseButton().click();
+			 Thread.sleep(3000);
 	}
 	
 	@Test(priority=12, dataProvider="invalidGetData", dataProviderClass=RegisterAsAnAgentTest.class)
-	public void InvalidPhoneNumberFormat(HashMap<String, String> data) {
+	public void InvalidPhoneNumberFormat(HashMap<String, String> data) throws InterruptedException {
 		//Verify user is unable to invite company if user input an invalid phone number format
 		 co = new Companies(driver);
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			 executor.executeScript("arguments[0].click();", sm.getCompanies());
-			 co.getInviteCompanyButton().click();
+			 executor.executeScript("arguments[0].click();", co.getInviteCompanyButton());
 			 ct = new CouponTest();
 			 co.getEmailAddressField().sendKeys(Keys.chord(Keys.COMMAND,"a"), "test@gmail.com");
 			 co.getBusinessNameField().sendKeys(Keys.chord(Keys.COMMAND, "a"), "Business" + ct.setCouponCode());
@@ -260,7 +262,8 @@ public class CompaniesTest extends base{
 			 co.getAdminLastNameField().sendKeys(Keys.chord(Keys.COMMAND, "a"), ct.setCouponCode());
 			 co.getPhoneNumberField().sendKeys(Keys.chord(Keys.COMMAND,"a"), data.get("Invalidphonenumber"));
 			 Assert.assertFalse(co.getInviteNewCompanyButton().isEnabled());
-			 co.getPopUpCloseButton().click();
+			 executor.executeScript("arguments[0].click();", co.getPopUpCloseButton());
+			 Thread.sleep(3000);
 	}
 	
 	@Test(priority=13, dataProvider="mergedData", dataProviderClass=AdminLoginTest.class)
@@ -362,6 +365,10 @@ public class CompaniesTest extends base{
 		 soft = new SoftAssert();
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			 executor.executeScript("arguments[0].click();", sm.getCompanies());
+			 Boolean staleElement = true;
+				while(staleElement){
+
+					  try{
 			 do {
 			 for(int q=0; q<co.getStatus().size(); q++) {
 				 if(co.getStatus().get(q).getText().equalsIgnoreCase("active")) {
@@ -374,6 +381,17 @@ public class CompaniesTest extends base{
 			 }
 			 
 			 }while(!co.getNextPagination().getText().contains("Next"));
+			 
+		     staleElement = false;
+
+
+					  } catch(StaleElementReferenceException e){
+
+					    staleElement = true;
+
+					  }
+
+					}
 			 soft.assertAll();
 	}
 	

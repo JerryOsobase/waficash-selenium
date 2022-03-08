@@ -6,61 +6,85 @@
   </listeners>
   <test thread-count="5" name="Testing Agent Portal(failed)">
     <classes>
-      <class name="agent.BusinessAddressTest">
+      <class name="agent.RegisterAsAnAgentTest">
         <methods>
           <include name="refreshPage"/>
-          <include name="terminate"/>
-          <include name="ValidatePreviewButton"/>
           <include name="initialize"/>
+          <include name="ValidateConsentForm" invocation-numbers="0"/>
+          <include name="terminate"/>
         </methods>
-      </class> <!-- agent.BusinessAddressTest -->
+      </class> <!-- agent.RegisterAsAnAgentTest -->
+      <class name="agent.GuarantorInformationTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="SuccessfulGuarantorForm" invocation-numbers="0"/>
+          <include name="terminate"/>
+          <include name="refreshPage"/>
+        </methods>
+      </class> <!-- agent.GuarantorInformationTest -->
       <class name="agent.FormPreviewTest">
         <methods>
+          <include name="ValidateFormPreviewPage" invocation-numbers="0"/>
           <include name="terminate"/>
+          <include name="ValidateIdentityInformationEditButton"/>
+          <include name="ValidateProceedButton"/>
+          <include name="ValidateResidentialAddressEditButton"/>
+          <include name="ValidateGuarantorInformationEditButton"/>
           <include name="initialize"/>
+          <include name="ValidatePersonalInformationEditButton"/>
+          <include name="ValidateBackButton"/>
           <include name="ValidateBusinessAddressEditButton"/>
         </methods>
       </class> <!-- agent.FormPreviewTest -->
-      <class name="agent.HomePageTest">
+      <class name="agent.IdentityInformationTest">
         <methods>
-          <include name="ValidateRegistrationButton"/>
-          <include name="initialize"/>
+          <include name="ValidateIdentityInformationPage"/>
           <include name="terminate"/>
+          <include name="initialize"/>
+          <include name="ValidateSuccessfulIdentityInformationForm" invocation-numbers="0 1"/>
+          <include name="refreshPage"/>
         </methods>
-      </class> <!-- agent.HomePageTest -->
+      </class> <!-- agent.IdentityInformationTest -->
       <class name="agent.PaymentTest">
         <methods>
           <include name="ValidateCouponCodeRemoval"/>
           <include name="validCouponCode" invocation-numbers="0"/>
+          <include name="InvalidCouponCode" invocation-numbers="0"/>
+          <include name="SuccessfulPayment"/>
           <include name="terminate"/>
           <include name="initialize"/>
+          <include name="ValidateBackButton"/>
+          <include name="ValidatePaymentPage" invocation-numbers="0"/>
         </methods>
       </class> <!-- agent.PaymentTest -->
     </classes>
   </test> <!-- Testing Agent Portal(failed) -->
   <test thread-count="5" name="Testing Admin Portal(failed)">
     <classes>
-      <class name="admin.ForgotPasswordTest">
+      <class name="admin.AdminLoginTest">
         <methods>
-          <include name="ValidateForgotPasswordLink" invocation-numbers="1"/>
-          <include name="initialize"/>
-          <include name="terminate"/>
-        </methods>
-      </class> <!-- admin.ForgotPasswordTest -->
-      <class name="admin.AddressTest">
-        <methods>
-          <include name="ValidateAddressListHeader"/>
+          <include name="ValidEmailAddress" invocation-numbers="0"/>
           <include name="terminate"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- admin.AddressTest -->
-      <class name="admin.IdentityTest">
+      </class> <!-- admin.AdminLoginTest -->
+      <class name="admin.ProfileTest">
         <methods>
-          <include name="ValidateIdentityCardResponse"/>
+          <include name="ValidateNewPasswordMatch" invocation-numbers="0"/>
+          <include name="terminate"/>
+          <include name="initialize"/>
+          <include name="InvalidCurrentPassword" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- admin.ProfileTest -->
+      <class name="admin.CouponTest">
+        <methods>
+          <include name="ValidateGeneratedCouponCardResponse"/>
           <include name="initialize"/>
           <include name="terminate"/>
+          <include name="ValidateClearMultipleList"/>
+          <include name="ValidateMultipleCouponFilter"/>
         </methods>
-      </class> <!-- admin.IdentityTest -->
+      </class> <!-- admin.CouponTest -->
     </classes>
   </test> <!-- Testing Admin Portal(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -212,15 +212,15 @@ SoftAssert soft;
 	@DataProvider
 	public  Object[][] getData() {
 		Object[][] data1=new Object[2][];
-		Map<String, String> validData = Map.of("emailaddress", "mavocem738@balaket.com","phonenumber", "09848489393", 
+		Map<String, String> validData = Map.of("emailaddress", "cobavah864@toudrum.com","phonenumber", "93410202617", 
 				"permitcategory", "Pools Betting","company", "test bet", "firstname", "Test", "lastname", "Test", "guarantorEmail",
-				"kespucerze@vusra.com", "guarantorPhone", "73837473892", "guarantorname", "john", "validCoupon","J100TEST-3AVWG");
+				"pedrasuspo@vusra.com", "guarantorPhone", "11102938479", "guarantorname", "john", "validCoupon","SEYOO-2LSXC");
 		Map <String, String> dp1= new HashMap <>(validData);
 		
 		data1[0]= new Object[] { dp1 };
-		Map<String, String> validData1 = Map.of("emailaddress", "tube19@macmill1.com", "phonenumber", "93044849380", "permitcategory",
+		Map<String, String> validData1 = Map.of("emailaddress", "cobavah864@toudrum.co", "phonenumber", "02923790462", "permitcategory",
 				"Online Casino", "company", "test bet 2", "firstname", "Testboy", "lastname", 
-				"noname", "guarantorEmail", "wataged624@rubygon.com", "guarantorPhone", "93029382743", "validCoupon", "CODEDREAM-QD1MX");
+				"noname", "guarantorEmail", "pedrasuspo@vusra.com", "guarantorPhone", "01928374904", "validCoupon", "SEYOO-5UQOK");
 		Map <String, String> dp4= new HashMap <>(validData1);
 		
 		data1[1]= new Object[] { dp4 };

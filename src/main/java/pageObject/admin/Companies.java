@@ -5,6 +5,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Companies {
 
@@ -28,7 +30,7 @@ public WebDriver driver;
 	private By adminLastNameField = By.xpath("//input[@placeholder='Enter Admin Last Name']");
 	private By phoneNumberField = By.xpath("//input[@placeholder='Enter Phone Number']");
 	private By inviteNewCompanyButton = By.xpath("//button[text()=' Invite New Company ']");
-	private By popUpCloseButton = By.cssSelector("button.close"); 
+	private By popUpCloseButton = By.cssSelector("div[id='add-company-modal'] button.close"); 
 	private By status = By.xpath("//tr/td[6]"); 
 	private By action = By.xpath("//tr/td[7]");
 	private By popUpFieldLabel = By.cssSelector("label[class*='form-label']");
@@ -69,30 +71,51 @@ public WebDriver driver;
 	}
 	
 	public WebElement getAdminLastNameField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.presenceOfElementLocated(adminLastNameField));
 		return driver.findElement(adminLastNameField);
 	}
 	
 	public WebElement getPhoneNumberField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.presenceOfElementLocated(phoneNumberField));
 		return driver.findElement(phoneNumberField);
 	}
 	
 	public WebElement getBusinessNameField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.presenceOfElementLocated(businessNameField));
 		return driver.findElement(businessNameField);
 	}
 	
 	public WebElement getAdminFirstNameField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.presenceOfElementLocated(adminFirstNameField));
 		return driver.findElement(adminFirstNameField);
 	}
 	
 	public WebElement getBusinessCategoryField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.presenceOfElementLocated(businessCategoryField));
 		return driver.findElement(businessCategoryField);
 	}
 	
 	public WebElement getTradeNameField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.presenceOfElementLocated(tradeNameField));
 		return driver.findElement(tradeNameField);
 	}
 	
 	public WebElement getEmailAddressField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.presenceOfElementLocated(emailAddressField));
 		return driver.findElement(emailAddressField);
 	}
 	
@@ -109,6 +132,9 @@ public WebDriver driver;
 	}
 	
 	public WebElement getInviteCompanyButton() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.elementToBeClickable(inviteCompanyButton));
 		return driver.findElement(inviteCompanyButton);
 	}
 	

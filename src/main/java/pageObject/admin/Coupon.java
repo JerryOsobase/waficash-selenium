@@ -139,6 +139,9 @@ public WebDriver driver;
 	}
 	
 	public List<WebElement> getAgentFieldDropdown() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.elementToBeClickable(agentFieldDropdown));
 		return driver.findElements(agentFieldDropdown);
 	}
 	

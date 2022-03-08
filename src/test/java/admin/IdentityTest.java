@@ -744,7 +744,7 @@ public class IdentityTest extends base{
 		executor.executeScript("arguments[0].click();", sm.getIdentity());
 		soft =new SoftAssert();
 		for(int q=0;q<id.getStatus().size(); q++) {
-			id.getStatus().get(q).click();
+			executor.executeScript("arguments[0].click();", id.getStatus().get(q));
 			if(ar.getViewAnywayButtons().size()>=1) {
 				ar.getViewAnywayButton().click();
 			}

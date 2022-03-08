@@ -10,7 +10,7 @@
     <classes>
     <class name="agent.HomePageTest"/> 
     <class name="agent.RegisterAsAnAgentTest"/> 
-   <class name="agent.PersonalInformationTest"/> 
+  <class name="agent.PersonalInformationTest"/>
       <class name="agent.IdentityInformationTest"/>
      <class name="agent.BusinessAddressTest"/> 
       <class name="agent.ResidentialAddressTest"/> 
@@ -42,7 +42,9 @@
       </class> 
       <class name="admin.CompaniesTest"/> 
       <class name="admin.ProfileTest"/> 
-      <class name="admin.TransactionTest"/> 
+      <class name="admin.TransactionsTest"/> 
+      <class name="admin.AuditLogTest"/> 
+     
      </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -16,7 +16,7 @@ public class AdminLogin {
 			this.driver=driver;
 		}
 		
-		private By emailAddressField= By.name("email");
+		private By emailAddressField= By.id("login-email");
 		private By goHomeLink= By.xpath("//a[text()=' Go Home ']");
 		private By agentlogin= By.xpath("//a[text()=' Agent Login ']");
 		private By rememberMeCheckbox = By.id("checkbox-signin");
@@ -80,6 +80,9 @@ public class AdminLogin {
 		}
 		
 		public WebElement getPasswordField() {
+			@SuppressWarnings("deprecation")
+			WebDriverWait wait = new WebDriverWait(driver,15) ;
+			wait.until(ExpectedConditions.presenceOfElementLocated(passwordField));
 			return driver.findElement(passwordField);
 		}
 		

@@ -21,7 +21,7 @@ public class ForgotPasswordTest extends base {
 		driver.manage().window().maximize();
 	}
 	
-	@Test(priority=1, dataProvider="getData", dataProviderClass=AdminLoginTest.class)
+	@Test(priority=1, dataProvider="mergedData", dataProviderClass=AdminLoginTest.class)
 	public void ValidateForgotPasswordLink(HashMap<String, String> data) {
 		//Verify the Forgot password link is clickable
 		al = new AdminLogin(driver);

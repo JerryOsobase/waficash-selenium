@@ -21,7 +21,7 @@ public WebDriver driver;
 	private By lgaField= By.xpath("//*[@id='filter-report-form']/div/div[4]/div/select");
 	private By filterButton = By.xpath("//button[text()=' Filter ']"); 
 	private By exportCsvButton = By.xpath("//button[text()=' Export CSV ']");
-	private By status = By.cssSelector("td.has-tooltip");
+	private By status = By.cssSelector("td.has-tooltip a");
 	private By tableHeader = By.xpath("//tr/th");
 	private By activePagination = By.xpath("//li[@class='page-item pagination-page-nav active']");
 	private By nextPagination = By.xpath("//li[@class='page-item pagination-page-nav active'] //following-sibling::li");

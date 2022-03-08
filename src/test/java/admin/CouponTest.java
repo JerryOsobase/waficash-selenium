@@ -413,7 +413,6 @@ public class CouponTest extends base {
 					 break;
 				 }
 		 }
-		System.out.println(single);
 		Select couponDropDown = new Select(c.getGeneratedCouponCategory());
 		couponDropDown.selectByVisibleText("Single");
 		 executor.executeScript("arguments[0].click();", c.getFilterButton());
