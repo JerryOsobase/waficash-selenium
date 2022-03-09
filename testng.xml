@@ -44,6 +44,8 @@
       <class name="admin.ProfileTest"/> 
       <class name="admin.TransactionsTest"/> 
       <class name="admin.AuditLogTest"/> 
+      <class name="admin.PrintLicenseIdTest"/> 
+      
      
      </classes>
   </test> <!-- Test -->

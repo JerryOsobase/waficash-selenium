@@ -1,66 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-08T18:01:50 WAT" name="Default suite" finished-at="2022-03-08T18:03:00 WAT" duration-ms="69744">
+  <suite started-at="2022-03-09T19:33:04 WAT" name="Default suite" finished-at="2022-03-09T19:38:06 WAT" duration-ms="301501">
     <groups>
     </groups>
-    <test started-at="2022-03-08T18:01:50 WAT" name="Default test" finished-at="2022-03-08T18:03:00 WAT" duration-ms="69744">
-      <class name="admin.AuditLogTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:01:50 WAT" name="initialize" finished-at="2022-03-08T18:02:13 WAT" duration-ms="22742" status="PASS">
+    <test started-at="2022-03-09T19:33:04 WAT" name="Default test" finished-at="2022-03-09T19:38:06 WAT" duration-ms="301501">
+      <class name="admin.PrintLicenseIdTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:33:04 WAT" name="initialize" finished-at="2022-03-09T19:33:27 WAT" duration-ms="22713" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="ValidateAuditLoginPage(java.util.HashMap)[pri:1, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:13 WAT" name="ValidateAuditLoginPage" data-provider="mergedData" finished-at="2022-03-08T18:02:20 WAT" duration-ms="6722" status="PASS">
+        <test-method signature="ValidateAuditLoginPage(java.util.HashMap)[pri:1, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:33:27 WAT" name="ValidateAuditLoginPage" data-provider="mergedData" finished-at="2022-03-09T19:33:33 WAT" duration-ms="6032" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=kagefe1978@ketchet.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
+                <![CDATA[{emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=kagefe1978@ketchet.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateAuditLoginPage -->
-        <test-method signature="ValidateLogListHeader()[pri:2, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:20 WAT" name="ValidateLogListHeader" finished-at="2022-03-08T18:02:20 WAT" duration-ms="105" status="PASS">
+        <test-method signature="ValidatePageTabs()[pri:2, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:33:33 WAT" name="ValidatePageTabs" finished-at="2022-03-09T19:33:33 WAT" duration-ms="208" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateLogListHeader -->
-        <test-method signature="ValidateUserSearchField(java.util.HashMap)[pri:3, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:20 WAT" name="ValidateUserSearchField" data-provider="getData" finished-at="2022-03-08T18:02:28 WAT" duration-ms="8138" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{usersearch=Osobase}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- ValidatePageTabs -->
+        <test-method signature="ValidatePendingIdListHeader()[pri:3, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:33:33 WAT" name="ValidatePendingIdListHeader" finished-at="2022-03-09T19:34:03 WAT" duration-ms="30126" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateUserSearchField -->
-        <test-method signature="ValidateUserSearchField(java.util.HashMap)[pri:3, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:28 WAT" name="ValidateUserSearchField" data-provider="getData" finished-at="2022-03-08T18:02:36 WAT" duration-ms="7965" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{usersearch=Seyi}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- ValidatePendingIdListHeader -->
+        <test-method signature="ValidatePreviouslyPrintedIdListHeader()[pri:4, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:34:03 WAT" name="ValidatePreviouslyPrintedIdListHeader" finished-at="2022-03-09T19:34:06 WAT" duration-ms="2378" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateUserSearchField -->
-        <test-method signature="ValidateEventFieldDropDownList()[pri:4, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:36 WAT" name="ValidateEventFieldDropDownList" finished-at="2022-03-08T18:02:36 WAT" duration-ms="295" status="PASS">
+        </test-method> <!-- ValidatePreviouslyPrintedIdListHeader -->
+        <test-method signature="ValidatePendingAgentStatus()[pri:5, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:34:06 WAT" name="ValidatePendingAgentStatus" finished-at="2022-03-09T19:34:37 WAT" duration-ms="31475" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateEventFieldDropDownList -->
-        <test-method signature="ValidateAuditLogCardResponse()[pri:5, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:02:36 WAT" name="ValidateAuditLogCardResponse" finished-at="2022-03-08T18:03:00 WAT" duration-ms="23523" status="PASS">
+        </test-method> <!-- ValidatePendingAgentStatus -->
+        <test-method signature="ValidatePrintedAgentStatus()[pri:6, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:34:37 WAT" name="ValidatePrintedAgentStatus" finished-at="2022-03-09T19:34:39 WAT" duration-ms="2258" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateAuditLogCardResponse -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:admin.AuditLogTest@4659191b]" started-at="2022-03-08T18:03:00 WAT" name="terminate" finished-at="2022-03-08T18:03:00 WAT" duration-ms="161" status="PASS">
+        </test-method> <!-- ValidatePrintedAgentStatus -->
+        <test-method signature="ValidatePrintIdButtonPending()[pri:7, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:34:39 WAT" name="ValidatePrintIdButtonPending" finished-at="2022-03-09T19:35:11 WAT" duration-ms="31269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatePrintIdButtonPending -->
+        <test-method signature="ValidatePrintIdButtonPrinted()[pri:8, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:35:11 WAT" name="ValidatePrintIdButtonPrinted" finished-at="2022-03-09T19:35:13 WAT" duration-ms="1926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatePrintIdButtonPrinted -->
+        <test-method signature="ValidatePrintIdButtonResponsePending()[pri:9, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:35:13 WAT" name="ValidatePrintIdButtonResponsePending" finished-at="2022-03-09T19:35:44 WAT" duration-ms="31255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatePrintIdButtonResponsePending -->
+        <test-method signature="ValidateBulkPrintButtonPending()[pri:10, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:35:44 WAT" name="ValidateBulkPrintButtonPending" finished-at="2022-03-09T19:36:29 WAT" duration-ms="45274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateBulkPrintButtonPending -->
+        <test-method signature="ValidateBulkPrintButtonPrinted()[pri:11, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:36:29 WAT" name="ValidateBulkPrintButtonPrinted" finished-at="2022-03-09T19:36:31 WAT" duration-ms="2053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateBulkPrintButtonPrinted -->
+        <test-method signature="ValidateSelectAllCheckboxPending()[pri:12, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:36:31 WAT" name="ValidateSelectAllCheckboxPending" finished-at="2022-03-09T19:37:17 WAT" duration-ms="46240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateSelectAllCheckboxPending -->
+        <test-method signature="ValidateSelectAllCheckboxPrinted()[pri:13, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:37:17 WAT" name="ValidateSelectAllCheckboxPrinted" finished-at="2022-03-09T19:37:19 WAT" duration-ms="1502" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateSelectAllCheckboxPrinted -->
+        <test-method signature="ValidateAllPendingIdPrint()[pri:14, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:37:19 WAT" name="ValidateAllPendingIdPrint" finished-at="2022-03-09T19:38:05 WAT" duration-ms="46477" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateAllPendingIdPrint -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:admin.PrintLicenseIdTest@2dc54ad4]" started-at="2022-03-09T19:38:05 WAT" name="terminate" finished-at="2022-03-09T19:38:06 WAT" duration-ms="172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminate -->
-      </class> <!-- admin.AuditLogTest -->
+      </class> <!-- admin.PrintLicenseIdTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
