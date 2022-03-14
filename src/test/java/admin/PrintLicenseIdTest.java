@@ -34,7 +34,7 @@ public class PrintLicenseIdTest extends base{
 	}
 	
 	@Test(priority=1, dataProvider="mergedData", dataProviderClass=AdminLoginTest.class)
-	public void ValidateAuditLoginPage(HashMap<String, String> data) {
+	public void ValidatePrintLicenseIdPage(HashMap<String, String> data) {
 	//Verify user is taken to the Print license ID page
 		alt = new AdminLoginTest();
 		alt.ValidateSuccessfulAdminLogin1(driver, data);

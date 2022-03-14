@@ -37,7 +37,7 @@ public class AuditLogTest extends base {
 	}
 	
 	@Test(priority=1, dataProvider="mergedData", dataProviderClass=AdminLoginTest.class)
-	public void ValidateAuditLoginPage(HashMap<String, String> data) {
+	public void ValidateAuditLogPage(HashMap<String, String> data) {
 	//Verify user is taken to the Audit log page
 		alt = new AdminLoginTest();
 		alt.ValidateSuccessfulAdminLogin1(driver, data);

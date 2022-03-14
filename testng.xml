@@ -45,6 +45,7 @@
       <class name="admin.TransactionsTest"/> 
       <class name="admin.AuditLogTest"/> 
       <class name="admin.PrintLicenseIdTest"/> 
+       <class name="admin.ReportTest"/> 
       
      
      </classes>
