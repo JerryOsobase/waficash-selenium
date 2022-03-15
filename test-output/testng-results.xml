@@ -1,104 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="19" passed="19" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="18" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-14T18:25:33 WAT" name="Default suite" finished-at="2022-03-14T18:26:24 WAT" duration-ms="50742">
+  <suite started-at="2022-03-15T13:39:48 WAT" name="Default suite" finished-at="2022-03-15T13:40:54 WAT" duration-ms="65458">
     <groups>
     </groups>
-    <test started-at="2022-03-14T18:25:33 WAT" name="Default test" finished-at="2022-03-14T18:26:24 WAT" duration-ms="50742">
-      <class name="admin.ReportTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:25:33 WAT" name="initialize" finished-at="2022-03-14T18:26:01 WAT" duration-ms="27963" status="PASS">
+    <test started-at="2022-03-15T13:39:48 WAT" name="Default test" finished-at="2022-03-15T13:40:54 WAT" duration-ms="65458">
+      <class name="admin.SettingsTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:39:48 WAT" name="initialize" finished-at="2022-03-15T13:40:02 WAT" duration-ms="14051" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="ValidateReportPage(java.util.HashMap)[pri:1, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:01 WAT" name="ValidateReportPage" data-provider="mergedData" finished-at="2022-03-14T18:26:06 WAT" duration-ms="5638" status="PASS">
+        <test-method signature="ValidateReportPage(java.util.HashMap)[pri:1, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:02 WAT" name="ValidateReportPage" data-provider="mergedData" finished-at="2022-03-15T13:40:08 WAT" duration-ms="5497" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=kagefe1978@ketchet.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
+                <![CDATA[{emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, password=Osobase4@, emailAddress=base4jerry@gmail.com, invalidMultipleCouponQuantity=0, companyEmail=kagefe1978@ketchet.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateReportPage -->
-        <test-method signature="ValidatePageTabs()[pri:2, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:06 WAT" name="ValidatePageTabs" finished-at="2022-03-14T18:26:07 WAT" duration-ms="95" status="PASS">
+        <test-method signature="ValidateField()[pri:2, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:08 WAT" name="ValidateField" finished-at="2022-03-15T13:40:09 WAT" duration-ms="838" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidatePageTabs -->
-        <test-method signature="ValidateCategoryDropdownList()[pri:3, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:07 WAT" name="ValidateCategoryDropdownList" finished-at="2022-03-14T18:26:07 WAT" duration-ms="482" status="PASS">
+        </test-method> <!-- ValidateField -->
+        <test-method signature="ValidateBusinessNameEdit()[pri:3, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:09 WAT" name="ValidateBusinessNameEdit" finished-at="2022-03-15T13:40:09 WAT" duration-ms="79" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateCategoryDropdownList -->
-        <test-method signature="ValidateEmptyReportRequest()[pri:4, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:07 WAT" name="ValidateEmptyReportRequest" finished-at="2022-03-14T18:26:08 WAT" duration-ms="1012" status="PASS">
+        </test-method> <!-- ValidateBusinessNameEdit -->
+        <test-method signature="ValidateBusinessAddressEdit()[pri:4, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:09 WAT" name="ValidateBusinessAddressEdit" finished-at="2022-03-15T13:40:14 WAT" duration-ms="4665" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateEmptyReportRequest -->
-        <test-method signature="ValidateAgentDetailsReport()[pri:5, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:08 WAT" name="ValidateAgentDetailsReport" finished-at="2022-03-14T18:26:10 WAT" duration-ms="2199" status="PASS">
+        </test-method> <!-- ValidateBusinessAddressEdit -->
+        <test-method signature="InvalidSupportPhoneNumberFormat(java.util.HashMap)[pri:5, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:14 WAT" name="InvalidSupportPhoneNumberFormat" data-provider="invalidGetData" finished-at="2022-03-15T13:40:14 WAT" duration-ms="383" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateAgentDetailsReport -->
-        <test-method signature="ValidateAgentDetailsBackButton()[pri:0, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:10 WAT" name="ValidateAgentDetailsBackButton" finished-at="2022-03-14T18:26:10 WAT" depends-on-methods="admin.ReportTest.ValidateAgentDetailsReport" duration-ms="181" status="PASS">
+        </test-method> <!-- InvalidSupportPhoneNumberFormat -->
+        <test-method signature="InvalidSupportPhoneNumberFormat(java.util.HashMap)[pri:5, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:14 WAT" name="InvalidSupportPhoneNumberFormat" data-provider="invalidGetData" finished-at="2022-03-15T13:40:14 WAT" duration-ms="286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateAgentDetailsBackButton -->
-        <test-method signature="ValidateVerificationFailedReport()[pri:6, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:10 WAT" name="ValidateVerificationFailedReport" finished-at="2022-03-14T18:26:11 WAT" duration-ms="779" status="PASS">
+        </test-method> <!-- InvalidSupportPhoneNumberFormat -->
+        <test-method signature="ValidateSupportPhoneNumberEdit()[pri:6, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:14 WAT" name="ValidateSupportPhoneNumberEdit" finished-at="2022-03-15T13:40:21 WAT" duration-ms="6635" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateVerificationFailedReport -->
-        <test-method signature="ValidateVerificationFailedBackButton()[pri:0, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:11 WAT" name="ValidateVerificationFailedBackButton" finished-at="2022-03-14T18:26:11 WAT" depends-on-methods="admin.ReportTest.ValidateVerificationFailedReport" duration-ms="105" status="PASS">
+        </test-method> <!-- ValidateSupportPhoneNumberEdit -->
+        <test-method signature="InvalidSupportEmailFormat(java.util.HashMap)[pri:7, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:21 WAT" name="InvalidSupportEmailFormat" data-provider="invalidGetData" finished-at="2022-03-15T13:40:21 WAT" duration-ms="130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateVerificationFailedBackButton -->
-        <test-method signature="ValidateGuarantorOutstandingReport()[pri:7, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:11 WAT" name="ValidateGuarantorOutstandingReport" finished-at="2022-03-14T18:26:12 WAT" duration-ms="895" status="PASS">
+        </test-method> <!-- InvalidSupportEmailFormat -->
+        <test-method signature="InvalidSupportEmailFormat(java.util.HashMap)[pri:7, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:21 WAT" name="InvalidSupportEmailFormat" data-provider="invalidGetData" finished-at="2022-03-15T13:40:21 WAT" duration-ms="152" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateGuarantorOutstandingReport -->
-        <test-method signature="ValidateGuarantorOutstandingBackButton()[pri:0, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:12 WAT" name="ValidateGuarantorOutstandingBackButton" finished-at="2022-03-14T18:26:12 WAT" depends-on-methods="admin.ReportTest.ValidateGuarantorOutstandingReport" duration-ms="71" status="PASS">
+        </test-method> <!-- InvalidSupportEmailFormat -->
+        <test-method signature="ValidateSupportEmailEdit()[pri:8, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:21 WAT" name="ValidateSupportEmailEdit" finished-at="2022-03-15T13:40:28 WAT" duration-ms="6460" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateGuarantorOutstandingBackButton -->
-        <test-method signature="ValidateTransactionReport()[pri:8, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:12 WAT" name="ValidateTransactionReport" finished-at="2022-03-14T18:26:13 WAT" duration-ms="771" status="PASS">
+        </test-method> <!-- ValidateSupportEmailEdit -->
+        <test-method signature="ValidatePrimaryContactNameEdit()[pri:9, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:28 WAT" name="ValidatePrimaryContactNameEdit" finished-at="2022-03-15T13:40:34 WAT" duration-ms="6381" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateTransactionReport -->
-        <test-method signature="ValidateTransactionReportBackButton()[pri:0, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:13 WAT" name="ValidateTransactionReportBackButton" finished-at="2022-03-14T18:26:13 WAT" depends-on-methods="admin.ReportTest.ValidateTransactionReport" duration-ms="128" status="PASS">
+        </test-method> <!-- ValidatePrimaryContactNameEdit -->
+        <test-method signature="InvalidPrimaryContactPhoneNumberFormat(java.util.HashMap)[pri:10, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:34 WAT" name="InvalidPrimaryContactPhoneNumberFormat" data-provider="invalidGetData" finished-at="2022-03-15T13:40:34 WAT" duration-ms="108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateTransactionReportBackButton -->
-        <test-method signature="ValidateInfractionReport()[pri:9, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:13 WAT" name="ValidateInfractionReport" finished-at="2022-03-14T18:26:14 WAT" duration-ms="762" status="PASS">
+        </test-method> <!-- InvalidPrimaryContactPhoneNumberFormat -->
+        <test-method signature="InvalidPrimaryContactPhoneNumberFormat(java.util.HashMap)[pri:10, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:34 WAT" name="InvalidPrimaryContactPhoneNumberFormat" data-provider="invalidGetData" finished-at="2022-03-15T13:40:34 WAT" duration-ms="73" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateInfractionReport -->
-        <test-method signature="ValidateInfractionReportBackButton()[pri:0, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:14 WAT" name="ValidateInfractionReportBackButton" finished-at="2022-03-14T18:26:14 WAT" depends-on-methods="admin.ReportTest.ValidateInfractionReport" duration-ms="202" status="PASS">
+        </test-method> <!-- InvalidPrimaryContactPhoneNumberFormat -->
+        <test-method signature="ValidatePrimaryContactPhoneNumberEdit()[pri:11, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:34 WAT" name="ValidatePrimaryContactPhoneNumberEdit" finished-at="2022-03-15T13:40:41 WAT" duration-ms="6369" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateInfractionReportBackButton -->
-        <test-method signature="ValidateInfractionReportViewPhotos()[pri:10, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:14 WAT" name="ValidateInfractionReportViewPhotos" finished-at="2022-03-14T18:26:17 WAT" duration-ms="2454" status="PASS">
+        </test-method> <!-- ValidatePrimaryContactPhoneNumberEdit -->
+        <test-method signature="ValidateBusinessWebsiteEdit()[pri:12, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:41 WAT" name="ValidateBusinessWebsiteEdit" finished-at="2022-03-15T13:40:47 WAT" duration-ms="6492" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateInfractionReportViewPhotos -->
-        <test-method signature="ValidateEnforcerReport()[pri:11, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:17 WAT" name="ValidateEnforcerReport" finished-at="2022-03-14T18:26:17 WAT" duration-ms="648" status="PASS">
+        </test-method> <!-- ValidateBusinessWebsiteEdit -->
+        <test-method signature="InvalidPrimaryContactEmailFormat(java.util.HashMap)[pri:13, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:47 WAT" name="InvalidPrimaryContactEmailFormat" data-provider="invalidGetData" finished-at="2022-03-15T13:40:47 WAT" duration-ms="103" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateEnforcerReport -->
-        <test-method signature="ValidateEnforcerReportBackButton()[pri:0, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:17 WAT" name="ValidateEnforcerReportBackButton" finished-at="2022-03-14T18:26:17 WAT" depends-on-methods="admin.ReportTest.ValidateEnforcerReport" duration-ms="74" status="PASS">
+        </test-method> <!-- InvalidPrimaryContactEmailFormat -->
+        <test-method signature="InvalidPrimaryContactEmailFormat(java.util.HashMap)[pri:13, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:47 WAT" name="InvalidPrimaryContactEmailFormat" data-provider="invalidGetData" finished-at="2022-03-15T13:40:47 WAT" duration-ms="89" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateEnforcerReportBackButton -->
-        <test-method signature="ValidateInspectionPage()[pri:12, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:17 WAT" name="ValidateInspectionPage" finished-at="2022-03-14T18:26:18 WAT" duration-ms="268" status="PASS">
+        </test-method> <!-- InvalidPrimaryContactEmailFormat -->
+        <test-method signature="ValidatePrimaryContactEmailEdit()[pri:14, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:47 WAT" name="ValidatePrimaryContactEmailEdit" finished-at="2022-03-15T13:40:54 WAT" duration-ms="6389" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateInspectionPage -->
-        <test-method signature="ValidateInspectionReportPage()[pri:13, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:18 WAT" name="ValidateInspectionReportPage" finished-at="2022-03-14T18:26:23 WAT" duration-ms="5719" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateInspectionReportPage -->
-        <test-method is-config="true" signature="terminate()[pri:0, instance:admin.ReportTest@2d710f1a]" started-at="2022-03-14T18:26:23 WAT" name="terminate" finished-at="2022-03-14T18:26:24 WAT" duration-ms="155" status="PASS">
+        </test-method> <!-- ValidatePrimaryContactEmailEdit -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:admin.SettingsTest@4659191b]" started-at="2022-03-15T13:40:54 WAT" name="terminate" finished-at="2022-03-15T13:40:54 WAT" duration-ms="152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminate -->
-      </class> <!-- admin.ReportTest -->
+      </class> <!-- admin.SettingsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

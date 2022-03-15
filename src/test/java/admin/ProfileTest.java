@@ -16,7 +16,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import agent.RegisterAsAnAgentTest;
-import pageObject.admin.Companies;
 import pageObject.admin.Profile;
 import pageObject.admin.SideMenu;
 import resources.base;

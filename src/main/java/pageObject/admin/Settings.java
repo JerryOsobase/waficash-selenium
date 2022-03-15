@@ -1,8 +1,12 @@
 package pageObject.admin;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Settings {
 public WebDriver driver;
@@ -21,10 +25,22 @@ public WebDriver driver;
 	private By primaryContactEmailField= By.id("primary-contact-email");
 	private By businessWebsiteField= By.id("business-website");
 	private By saveChangesButton= By.xpath("//button[text()=' Save Changes ']");
-	
+	private By fieldLabel= By.xpath("//label");
+	private By PromptMessage= By.cssSelector("div.iziToast-texts");
 	
 	public WebElement getSaveChangesButton() {
 		return driver.findElement(saveChangesButton);
+	}
+	
+	public WebElement getPromptMessage() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.elementToBeClickable(PromptMessage));
+		return driver.findElement(PromptMessage);
+	}
+	
+	public List<WebElement> getFieldLabel() {
+		return driver.findElements(fieldLabel);
 	}
     
     public WebElement getSettingsHeader() {
