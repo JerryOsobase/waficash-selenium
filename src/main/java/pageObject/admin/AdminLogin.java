@@ -15,7 +15,7 @@ public class AdminLogin {
 			// TODO Auto-generated constructor stub
 			this.driver=driver;
 		}
-		
+
 		private By emailAddressField= By.id("login-email");
 		private By goHomeLink= By.xpath("//a[text()=' Go Home ']");
 		private By agentlogin= By.xpath("//a[text()=' Agent Login ']");

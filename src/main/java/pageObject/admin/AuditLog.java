@@ -5,6 +5,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AuditLog {
 
@@ -37,6 +39,9 @@ public WebDriver driver;
 	}
 	
 	public List<WebElement> getAuditDetails() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.visibilityOfElementLocated(auditDetails));
 		return driver.findElements(auditDetails);
 	}
 	

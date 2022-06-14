@@ -47,6 +47,9 @@ public WebDriver driver;
 	}
 	
 	public WebElement getPromptMessage() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.visibilityOfElementLocated(PromptMessage));
 		return driver.findElement(PromptMessage);
 	}
 	
@@ -73,49 +76,49 @@ public WebDriver driver;
 	public WebElement getAdminLastNameField() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.presenceOfElementLocated(adminLastNameField));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(adminLastNameField));
 		return driver.findElement(adminLastNameField);
 	}
 	
 	public WebElement getPhoneNumberField() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.presenceOfElementLocated(phoneNumberField));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(phoneNumberField));
 		return driver.findElement(phoneNumberField);
 	}
 	
 	public WebElement getBusinessNameField() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.presenceOfElementLocated(businessNameField));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(businessNameField));
 		return driver.findElement(businessNameField);
 	}
 	
 	public WebElement getAdminFirstNameField() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.presenceOfElementLocated(adminFirstNameField));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(adminFirstNameField));
 		return driver.findElement(adminFirstNameField);
 	}
 	
 	public WebElement getBusinessCategoryField() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.presenceOfElementLocated(businessCategoryField));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(businessCategoryField));
 		return driver.findElement(businessCategoryField);
 	}
 	
 	public WebElement getTradeNameField() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.presenceOfElementLocated(tradeNameField));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(tradeNameField));
 		return driver.findElement(tradeNameField);
 	}
 	
 	public WebElement getEmailAddressField() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.presenceOfElementLocated(emailAddressField));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(emailAddressField));
 		return driver.findElement(emailAddressField);
 	}
 	
@@ -134,7 +137,7 @@ public WebDriver driver;
 	public WebElement getInviteCompanyButton() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.elementToBeClickable(inviteCompanyButton));
+		wait.until(ExpectedConditions.presenceOfElementLocated(inviteCompanyButton));
 		return driver.findElement(inviteCompanyButton);
 	}
 	

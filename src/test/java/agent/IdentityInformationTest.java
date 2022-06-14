@@ -200,7 +200,7 @@ public class IdentityInformationTest extends base{
 		id = new IdentityInformation (driver);
 		Select idTypeDropdown = new Select(id.getidType());
 		idTypeDropdown.selectByVisibleText("NIN");
-		id.getIdNumberNin().sendKeys(Keys.chord(Keys.COMMAND,"a"), data.get("validNIN"));
+		id.getIdNumberNin().sendKeys(Keys.chord(Keys.COMMAND,"a"), data.get("validBVN"));
 		Assert.assertTrue(id.getcontinueButton().isEnabled());
 		id.getcontinueButton().click();
 		ba = new BusinessAddress(driver);
@@ -218,13 +218,13 @@ public class IdentityInformationTest extends base{
 	@DataProvider
 	public  Object[][] validGetData() {
 		Object[][] data1=new Object[2][];
-		Map<String, String> validData = Map.of("validNIN", "66200933010","validBVN",
-				"25929833401","validDriverLicense", "Fp9433k40A13");
+		Map<String, String> validData = Map.of("validNIN", "01928390948","validBVN",
+				"29093990030","validDriverLicense", "Fp9433k40A13");
 		Map <String, String> dp1= new HashMap <>(validData);
 		
 		data1[0]= new Object[] { dp1 };
-		Map<String, String> validData1 = Map.of("validNIN", "6623028400","validBVN",
-				"25936620332","validDriverLicense", "Fp3369k40A30");
+		Map<String, String> validData1 = Map.of("validNIN", "01928390900","validBVN",
+				"29113990030","validDriverLicense", "Fp3369k40A30");
 		Map <String, String> dp4= new HashMap <>(validData1);
 		
 		data1[1]= new Object[] { dp4 };

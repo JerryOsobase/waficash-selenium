@@ -73,7 +73,6 @@ public class CompaniesTest extends base{
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			 executor.executeScript("arguments[0].click();", sm.getCompanies());
 			 co.getInviteCompanyButton().click();
-			 Thread.sleep(3000);
 			 soft.assertTrue(co.getAdminFirstNameField().isDisplayed());
 			 soft.assertTrue(co.getInviteNewCompanyButton().isDisplayed());
 			 List<String> originalCompanyFieldLabel= co.getPopUpFieldLabel().stream().map(a->a.getText()).collect(Collectors.toList());
@@ -242,7 +241,6 @@ public class CompaniesTest extends base{
 			 co.getPhoneNumberField().sendKeys(Keys.chord(Keys.COMMAND,"a"), Keys.chord(Keys.DELETE));
 			 Assert.assertFalse(co.getInviteNewCompanyButton().isEnabled());
 			 co.getPopUpCloseButton().click();
-			 Thread.sleep(3000);
 	}
 	
 	@Test(priority=12, dataProvider="invalidGetData", dataProviderClass=RegisterAsAnAgentTest.class)
@@ -251,7 +249,7 @@ public class CompaniesTest extends base{
 		 co = new Companies(driver);
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			 executor.executeScript("arguments[0].click();", sm.getCompanies());
-			 executor.executeScript("arguments[0].click();", co.getInviteCompanyButton());
+			 co.getInviteCompanyButton().click();
 			 ct = new CouponTest();
 			 co.getEmailAddressField().sendKeys(Keys.chord(Keys.COMMAND,"a"), "test@gmail.com");
 			 co.getBusinessNameField().sendKeys(Keys.chord(Keys.COMMAND, "a"), "Business" + ct.setCouponCode());
@@ -263,7 +261,6 @@ public class CompaniesTest extends base{
 			 co.getPhoneNumberField().sendKeys(Keys.chord(Keys.COMMAND,"a"), data.get("Invalidphonenumber"));
 			 Assert.assertFalse(co.getInviteNewCompanyButton().isEnabled());
 			 executor.executeScript("arguments[0].click();", co.getPopUpCloseButton());
-			 Thread.sleep(3000);
 	}
 	
 	@Test(priority=13, dataProvider="mergedData", dataProviderClass=AdminLoginTest.class)
@@ -286,7 +283,6 @@ public class CompaniesTest extends base{
 			 co.getAdminLastNameField().sendKeys(Keys.chord(Keys.COMMAND, "a"), LastName);
 			 co.getPhoneNumberField().sendKeys(Keys.chord(Keys.COMMAND,"a"), data.get("companyPhoneNumber"));
 			 co.getInviteNewCompanyButton().click();
-			 Thread.sleep(3000);
 			 soft.assertEquals(co.getPromptMessage().getText(), "Success\n"
 			 		+ "Invitation sent successfully");
 			 List<String> originalCompanyDetails= new ArrayList<String>();
@@ -330,7 +326,6 @@ public class CompaniesTest extends base{
 			 co.getAdminLastNameField().sendKeys(Keys.chord(Keys.COMMAND, "a"), ct.setCouponCode());
 			 co.getPhoneNumberField().sendKeys(Keys.chord(Keys.COMMAND,"a"), "63938292983");
 			 co.getInviteNewCompanyButton().click();
-			 Thread.sleep(3000);
 			 Assert.assertEquals(co.getPromptMessage().getText(), "Error\n"
 			 		+ "An account with this email already exists");
 			 co.getPopUpCloseButton().click();
@@ -395,7 +390,7 @@ public class CompaniesTest extends base{
 			 soft.assertAll();
 	}
 	
-	/*@Test(priority=15, dataProvider="mergedData", dataProviderClass=RegisterAsAnAgentTest.class)
+	/*@Test(priority=16, dataProvider="mergedData", dataProviderClass=RegisterAsAnAgentTest.class)
 	public void ValidateDeactivateButton(HashMap<String, String> data) throws InterruptedException {
 		//Check system response when user click on the Deactivate button
 		 co = new Companies(driver);

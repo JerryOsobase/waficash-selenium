@@ -48,6 +48,9 @@ public WebDriver driver;
 	}
 	
 	public WebElement getConfirmPasswordField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.visibilityOfElementLocated(confirmPasswordField));
 		return driver.findElement(confirmPasswordField);
 	}
 	
@@ -86,10 +89,16 @@ public WebDriver driver;
 	}
 	
 	public WebElement getNewPasswordField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.visibilityOfElementLocated(newPasswordField));
 		return driver.findElement(newPasswordField);
 	}
 	
 	public WebElement getCurrentPasswordField() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.visibilityOfElementLocated(currentPasswordField));
 		return driver.findElement(currentPasswordField);
 	}
 	

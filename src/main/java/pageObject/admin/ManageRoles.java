@@ -18,7 +18,7 @@ public WebDriver driver;
 	}
 	
 	private By roles= By.xpath("//a[@role='tab']"); 
-	private By assignedUsersLink= By.xpath("//a[@class='transition fade-link pointer has-tooltip']"); 
+	private By assignedUsersLink= By.cssSelector("a[class*=has-tooltip]"); 
 	private By assignedUsersList= By.xpath("//div[@class='modal-body'] //li");
 	private By popUpCloseButton = By.cssSelector("button.close"); 
 	private By addCustomRoleButton= By.xpath("//div[@class='p-2']/button");
@@ -34,7 +34,7 @@ public WebDriver driver;
 	private By PromptMessage= By.cssSelector("div.iziToast-texts");
 	private By roleAssignedMembers= By.xpath("//p[@class='font-12 text-muted']");
 	private By roleAccessHeader= By.cssSelector("li[class*='list-group-item-success']");
-	private By assignedMembersFormHeader= By.xpath("//*[@id=\"view-all-role-users-modal\"] //div[1]/h4");
+	private By assignedMembersFormHeader= By.xpath("//div[@id='view-all-role-users-modal'] //h4");
 	private By assignedMembersFormCancelButton= By.xpath("//*[@id=\"view-all-role-users-modal\"] //div[1]/button");
 	private By editButton= By.xpath("//button[text()='Edit ']");
 	private By deleteButton= By.xpath("//button[text()='Delete ']");
@@ -46,7 +46,7 @@ public WebDriver driver;
 	public WebElement getPopUpDeleteText() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.presenceOfElementLocated(popUpDeleteButton));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(popUpDeleteButton));
 		return driver.findElement(popUpDeleteText);
 	}
 	
@@ -77,7 +77,7 @@ public WebDriver driver;
 	public WebElement getAssignedMembersFormHeader() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.elementToBeClickable(assignedMembersFormHeader));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(assignedMembersFormHeader));
 		return driver.findElement(assignedMembersFormHeader);
 	}
 	
@@ -90,13 +90,16 @@ public WebDriver driver;
 	}
 	
 	public WebElement getPromptMessage() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver,10) ;
+		wait.until(ExpectedConditions.visibilityOfElementLocated(PromptMessage));
 		return driver.findElement(PromptMessage);
 	}
 	
 	public List<WebElement> getRoleList() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.elementToBeClickable(roleList));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(roleList));
 		return driver.findElements(roleList);
 	}
 	
@@ -131,7 +134,7 @@ public WebDriver driver;
 	public WebElement getCustomRoleFormHeader() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,10) ;
-		wait.until(ExpectedConditions.elementToBeClickable(customRoleFormHeader));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(customRoleFormHeader));
 		return driver.findElement(customRoleFormHeader);
 	}
 	

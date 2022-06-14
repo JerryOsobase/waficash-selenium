@@ -75,7 +75,7 @@ public class ReportTest extends base{
 			List<WebElement> allOptions= categoryDropDown.getOptions();
 			List<String> categoryOptions= allOptions.stream().map(a->a.getText()).collect(Collectors.toList());
 			String[] categoryTypeList= {"-- select category --", "Agent Details", "Verification Failed", "Guarantor Outstanding",
-					"Transaction Reports", "Infraction Report", "Enforcer Report", "Agent Summary Report"};
+					"Transaction Reports", "Infraction Report", "Enforcer Report", "Unregistered Agent Infraction Report", "Agent Summary Report"};
 			List<String> categoryTypeListArray= Arrays.asList(categoryTypeList);
 			Assert.assertEquals(categoryOptions, categoryTypeListArray);
 	}

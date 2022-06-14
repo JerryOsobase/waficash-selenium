@@ -130,7 +130,7 @@ public class AuditLogTest extends base {
 			  try{
 
 				  executor.executeScript("arguments[0].click();", aul.getActivity().get(q));
-				  Thread.sleep(1000);
+				  Thread.sleep(2000);
 				  List<String> originalAuditDetails= aul.getAuditDetails().stream().map(a->a.getText()).collect(Collectors.toList());
 					 String[] auditDetails= {"User", "Phone Number", "Email Address", "Event", "IP Address", "Activity", "Date"};
 						List<String> expectedauditDetailsArray= Arrays.asList(auditDetails);

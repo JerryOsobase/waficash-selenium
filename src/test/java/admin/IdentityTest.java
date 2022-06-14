@@ -58,7 +58,7 @@ public class IdentityTest extends base{
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			 executor.executeScript("arguments[0].click();", sm.getIdentity());
 			 List<String> originalIdentityListHeader= id.getTableHeader().stream().map(a->a.getText()).collect(Collectors.toList());
-			 String[] expectedIdentityListHeader= {"#", "Status", "Application ID", "LSLB Permit Number", "Name",
+			 String[] expectedIdentityListHeader= {"#", "Status", "Application ID", "LSLGA Permit Number", "Name",
 					 "LGA/LCDA", "Created At", "Modified At"};
 				List<String> expectedHeaderArray= Arrays.asList(expectedIdentityListHeader);
 				Assert.assertEquals(originalIdentityListHeader, expectedHeaderArray);

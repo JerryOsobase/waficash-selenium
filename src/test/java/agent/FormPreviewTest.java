@@ -107,6 +107,9 @@ public class FormPreviewTest extends base {
 		//Check system response when user click on Edit beside Business Address
 		fp = new FormPreview(driver);
 		soft = new SoftAssert();
+		Boolean staleElement = true;
+		while(staleElement){
+			  try{
 		for(int e=0; e<fp.getEditHeader().size(); e++) {
 			if(fp.getEditHeader().get(e).getText().contains("Business Address")) {
 				for(int f=0; f<fp.getEditButton().size();f++) {
@@ -115,26 +118,18 @@ public class FormPreviewTest extends base {
 				break;
 			}
 		}
-		Boolean staleElement = true;
-		while(staleElement){
-
-			  try{
-					ba = new BusinessAddress(driver);
-					soft.assertTrue(ba.getlandmark().isDisplayed());
+		ba = new BusinessAddress(driver);
+		soft.assertTrue(ba.getlandmark().isDisplayed());
+		
+				  ba = new BusinessAddress(driver);
+			 soft.assertTrue(ba.getlandmark().isDisplayed());
 			    ba.getpreviewButton().click(); 
-
 			     staleElement = false;
-
-
 			  } catch(StaleElementReferenceException e){
-
 			    staleElement = true;
-
 			  }
-
 			}	
 		soft.assertTrue(fp.getproceedButton().isDisplayed());
-		
 		soft.assertAll();
 		
 	}

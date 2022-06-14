@@ -106,7 +106,7 @@ public WebDriver driver;
 	public WebElement getPromptMessage() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(driver,15) ;
-		wait.until(ExpectedConditions.elementToBeClickable(PromptMessage));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(PromptMessage));
 		return driver.findElement(PromptMessage);
 	}
 	

@@ -11,13 +11,14 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -340,22 +341,16 @@ public class CouponTest extends base {
 		c = new Coupon(driver);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		 executor.executeScript("arguments[0].click();", sm.getCoupon());
-		 Thread.sleep(5000);
 		String splitter[]= c.getTableFooterText().getText().split("of");
-		 long count =  c.getCode().stream().count();
-			
-		while(c.getActivePagination().size()==1) {
-			Thread.sleep(3000);
-			
-			c.getNextPagination().click();
-			Thread.sleep(3000);
-			 count += c.getCode().stream().count();
-			
-			  if(c.getNextPagination().getText().contains("Next")) {
-				 break;
-			 }
-			  
-		 }
+		long count =  c.getCode().stream().count();
+		 do {
+				 if(!c.getNextPagination().getText().contains("Next")) {
+					 c.getNextPagination().click();
+					 Thread.sleep(3000);
+					 count +=  c.getCode().stream().count();
+				 }
+			 }while(!c.getNextPagination().getText().contains("Next"));
+		 
 		Assert.assertEquals(splitter[1].trim(), count+ " entries");	
 	}
 	
@@ -380,59 +375,27 @@ public class CouponTest extends base {
 		sm = new SideMenu(driver);
 		c = new Coupon(driver);
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		SoftAssert soft = new SoftAssert();
 		 executor.executeScript("arguments[0].click();", sm.getCoupon());
-		 Thread.sleep(5000);
-		 int single = 0;
-		 int multiple = 0;
-		 for(int q=0; q<c.getQuantity().size(); q++) {
-			 String splitter[] = c.getQuantity().get(q).getText().split("/");
-			 if(splitter[1].trim().equals("1")) {
-				 single++;
-			 }
-			 else {
-				 multiple++;
-			 }
-			 }
-			
-		while(c.getActivePagination().size()==1) {
-				Thread.sleep(3000);
-				
-				c.getNextPagination().click();
-				Thread.sleep(3000);
-				 for(int r=0; r<c.getQuantity().size(); r++) {
-					 String splitter1[] = c.getQuantity().get(r).getText().split("/");
-					 if(splitter1[1].trim().equals("1")) {
-						 single++;
-					 }
-					 else {
-						 multiple++;
-					 }
-				 
-				 }
-				  if(c.getNextPagination().getText().contains("Next")) {
-					 break;
-				 }
-		 }
 		Select couponDropDown = new Select(c.getGeneratedCouponCategory());
 		couponDropDown.selectByVisibleText("Single");
 		 executor.executeScript("arguments[0].click();", c.getFilterButton());
-		 Thread.sleep(5000);
-		long count =  c.getCode().stream().count();
-		
-			while(c.getActivePagination().size()==1) {
-				
-				
-				c.getNextPagination().click();
-				Thread.sleep(3000);
-				count += c.getCode().stream().count();
-				
-				
-				  if(c.getNextPagination().getText().contains("Next")) {
-					 break;
+			@SuppressWarnings("deprecation")
+			WebDriverWait wait = new WebDriverWait(driver,10) ;
+			wait.until(ExpectedConditions.visibilityOf(c.getClearButton()));
+		 soft.assertTrue(c.getClearButton().isDisplayed());
+		 String splitter[]= c.getTableFooterText().getText().split("of");
+		long count = c.getQuantity().stream().map(v->v.getText().split("/")[1]).filter(v->v.equals("1")).count();
+			 do { 	
+				 if(!c.getNextPagination().getText().contains("Next")) {
+					 c.getNextPagination().click();
+					 Thread.sleep(3000);
+					 count += c.getQuantity().stream().map(v->v.getText().split("/")[1]).filter(v->v.equals("1")).count();
 				 }
-				  
-			 }
-			Assert.assertEquals(single, count);
+					
+				 }while(!c.getNextPagination().getText().contains("Next"));
+			 soft.assertEquals(splitter[1].trim(), count+ " entries");
+			 soft.assertAll();
 			
 		}
 	
@@ -441,23 +404,21 @@ public class CouponTest extends base {
 		//Verify user can clear filter for single filtered list
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		 executor.executeScript("arguments[0].click();", c.getClearButton());
-		 Thread.sleep(5000);
+		 @SuppressWarnings("deprecation")
+			WebDriverWait wait = new WebDriverWait(driver,10) ;
+			wait.until(ExpectedConditions.invisibilityOf(c.getClearButton()));
 		String splitter[]= c.getTableFooterText().getText().split("of");
 		 long count =  c.getCode().stream().count();
 			
-		while(c.getActivePagination().size()==1) {
-			
-			
-			c.getNextPagination().click();
-			Thread.sleep(3000);
-			 count += c.getCode().stream().count();
-			
-			  if(c.getNextPagination().getText().contains("Next")) {
-				 break;
+		 do {
+			 if(!c.getNextPagination().getText().contains("Next")) {
+				 c.getNextPagination().click();
+				 Thread.sleep(3000);
+				 count +=  c.getCode().stream().count();
 			 }
-			  
-		 }
-		Assert.assertEquals(splitter[1].trim(), count+ " entries");	
+		 }while(!c.getNextPagination().getText().contains("Next"));
+	 
+	Assert.assertEquals(splitter[1].trim(), count+ " entries");	
 	}
 	
 	@Test(priority=20)
@@ -465,60 +426,32 @@ public class CouponTest extends base {
 		//Verify user can filter by the multiple category option
 		sm = new SideMenu(driver);
 		c = new Coupon(driver);
+		SoftAssert soft = new SoftAssert();
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		 executor.executeScript("arguments[0].click();", sm.getCoupon());
-		 Thread.sleep(5000);
-		 int single = 0;
-		 int multiple = 0;
-		 for(int q=0; q<c.getQuantity().size(); q++) {
-			 String splitter[] = c.getQuantity().get(q).getText().split("/");
-			 if(splitter[1].trim().equals("1")) {
-				 single++;
-			 }
-			 else {
-				 multiple++;
-			 }
-			 }
-			
-		while(c.getActivePagination().size()==1) {
-				Thread.sleep(3000);
-				
-				c.getNextPagination().click();
-				Thread.sleep(3000);
-				 for(int r=0; r<c.getQuantity().size(); r++) {
-					 String splitter1[] = c.getQuantity().get(r).getText().split("/");
-					 if(splitter1[1].trim().equals("1")) {
-						 single++;
-					 }
-					 else {
-						 multiple++;
-					 }
-				 
-				 }
-				  if(c.getNextPagination().getText().contains("Next")) {
-					 break;
-				 }
-		 }
-		
 		Select couponDropDown = new Select(c.getGeneratedCouponCategory());
 		couponDropDown.selectByVisibleText("Multiple");
 		 executor.executeScript("arguments[0].click();", c.getFilterButton());
-		 Thread.sleep(5000);
-		long count =  c.getCode().stream().count();
-			
-			while(c.getActivePagination().size()==1) {
-				
-				
-				c.getNextPagination().click();
-				Thread.sleep(3000);
-				count += c.getCode().stream().count();
-				
-				  if(c.getNextPagination().getText().contains("Next")) {
-					 break;
+			@SuppressWarnings("deprecation")
+			WebDriverWait wait = new WebDriverWait(driver,10) ;
+			wait.until(ExpectedConditions.visibilityOf(c.getClearButton()));
+		 soft.assertTrue(c.getClearButton().isDisplayed());
+		 String splitter[]= c.getTableFooterText().getText().split("of");
+		long count = c.getQuantity().stream().map(v->v.getText().split("/")[1]).filter(v->!v.equals("1")).count();
+		System.out.println(count);
+			 do { 	
+				 if(!c.getNextPagination().getText().contains("Next")) {
+					 c.getNextPagination().click();
+					 Thread.sleep(3000);
+					 count += c.getQuantity().stream().map(v->v.getText().split("/")[1]).filter(v->!v.equals("1")).count();
 				 }
-				  
-			 }
-			Assert.assertEquals(multiple, count);
+					
+				 }while(!c.getNextPagination().getText().contains("Next"));
+			 System.out.println(splitter[1]);
+			 System.out.println(count);
+			 soft.assertEquals(splitter[1].trim(), count+ " entries");
+			 soft.assertAll();
+		
 		}
 		
 	
@@ -527,24 +460,21 @@ public class CouponTest extends base {
 		//Verify user can clear filter for multiple filtered list
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		 executor.executeScript("arguments[0].click();", c.getClearButton());
-		 Thread.sleep(5000);
+		 @SuppressWarnings("deprecation")
+			WebDriverWait wait = new WebDriverWait(driver,10) ;
+			wait.until(ExpectedConditions.invisibilityOf(c.getClearButton()));
 		String splitter[]= c.getTableFooterText().getText().split("of");
 		 long count =  c.getCode().stream().count();
 			
-		while(c.getActivePagination().size()==1) {
-			
-			
-			c.getNextPagination().click();
-			Thread.sleep(3000);
-			 count += c.getCode().stream().count();
-			
-			  if(c.getNextPagination().getText().contains("Next")) {
-				 break;
+		 do {
+			 if(!c.getNextPagination().getText().contains("Next")) {
+				 c.getNextPagination().click();
+				 Thread.sleep(3000);
+				 count +=  c.getCode().stream().count();
 			 }
-			  
-		 }
-		System.out.println(count+ " entries");
-		Assert.assertEquals(splitter[1].trim(), count+ " entries");	
+		 }while(!c.getNextPagination().getText().contains("Next"));
+	 
+	Assert.assertEquals(splitter[1].trim(), count+ " entries");
 	}
 	
 	@Test(priority=21)
@@ -593,8 +523,7 @@ public class CouponTest extends base {
 			 
 	
 		 soft.assertAll();
-	
-	
+		 
 	}
 	
 	@Test(priority=23)
@@ -626,7 +555,6 @@ public class CouponTest extends base {
 	  }
 	  }
 	}
-		 
 		 
 		 soft.assertAll();
 		 

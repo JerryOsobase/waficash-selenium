@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,106 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">18 methods,   18 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="InvalidPrimaryContactEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})">InvalidPrimaryContactEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="admin.CouponTest2" class="method navigator-link" hash-for-method="ValidateCouponPage({invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=te...)">ValidateCouponPage({invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=te...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="InvalidPrimaryContactEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})">InvalidPrimaryContactEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})">InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})">InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="InvalidSupportEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})">InvalidSupportEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="InvalidSupportEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})">InvalidSupportEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="InvalidSupportPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})">InvalidSupportPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="InvalidSupportPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})">InvalidSupportPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidateBusinessAddressEdit">ValidateBusinessAddressEdit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidateBusinessNameEdit">ValidateBusinessNameEdit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidateBusinessWebsiteEdit">ValidateBusinessWebsiteEdit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidateField">ValidateField</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidatePrimaryContactEmailEdit">ValidatePrimaryContactEmailEdit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidatePrimaryContactNameEdit">ValidatePrimaryContactNameEdit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidatePrimaryContactPhoneNumberEdit">ValidatePrimaryContactPhoneNumberEdit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidateReportPage({emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, singleCoupon=12500, permitName=te...)">ValidateReportPage({emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, singleCoupon=12500, permitName=te...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidateSupportEmailEdit">ValidateSupportEmailEdit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="admin.SettingsTest" class="method navigator-link" hash-for-method="ValidateSupportPhoneNumberEdit">ValidateSupportPhoneNumberEdit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -204,153 +119,60 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">admin.SettingsTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">admin.CouponTest2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="InvalidPrimaryContactEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})">
-                  </a> <!-- InvalidPrimaryContactEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1}) -->
-                  <span class="method-name">InvalidPrimaryContactEmailFormat</span>
-                  <span class="parameters">({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidPrimaryContactEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})">
-                  </a> <!-- InvalidPrimaryContactEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko}) -->
-                  <span class="method-name">InvalidPrimaryContactEmailFormat</span>
-                  <span class="parameters">({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})">
-                  </a> <!-- InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko}) -->
-                  <span class="method-name">InvalidPrimaryContactPhoneNumberFormat</span>
-                  <span class="parameters">({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})">
-                  </a> <!-- InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1}) -->
-                  <span class="method-name">InvalidPrimaryContactPhoneNumberFormat</span>
-                  <span class="parameters">({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidSupportEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})">
-                  </a> <!-- InvalidSupportEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko}) -->
-                  <span class="method-name">InvalidSupportEmailFormat</span>
-                  <span class="parameters">({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidSupportEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})">
-                  </a> <!-- InvalidSupportEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1}) -->
-                  <span class="method-name">InvalidSupportEmailFormat</span>
-                  <span class="parameters">({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidSupportPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})">
-                  </a> <!-- InvalidSupportPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko}) -->
-                  <span class="method-name">InvalidSupportPhoneNumberFormat</span>
-                  <span class="parameters">({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidSupportPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})">
-                  </a> <!-- InvalidSupportPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1}) -->
-                  <span class="method-name">InvalidSupportPhoneNumberFormat</span>
-                  <span class="parameters">({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidateBusinessAddressEdit">
-                  </a> <!-- ValidateBusinessAddressEdit -->
-                  <span class="method-name">ValidateBusinessAddressEdit</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidateBusinessNameEdit">
-                  </a> <!-- ValidateBusinessNameEdit -->
-                  <span class="method-name">ValidateBusinessNameEdit</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidateBusinessWebsiteEdit">
-                  </a> <!-- ValidateBusinessWebsiteEdit -->
-                  <span class="method-name">ValidateBusinessWebsiteEdit</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidateField">
-                  </a> <!-- ValidateField -->
-                  <span class="method-name">ValidateField</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidatePrimaryContactEmailEdit">
-                  </a> <!-- ValidatePrimaryContactEmailEdit -->
-                  <span class="method-name">ValidatePrimaryContactEmailEdit</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidatePrimaryContactNameEdit">
-                  </a> <!-- ValidatePrimaryContactNameEdit -->
-                  <span class="method-name">ValidatePrimaryContactNameEdit</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidatePrimaryContactPhoneNumberEdit">
-                  </a> <!-- ValidatePrimaryContactPhoneNumberEdit -->
-                  <span class="method-name">ValidatePrimaryContactPhoneNumberEdit</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidateReportPage({emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, singleCoupon=12500, permitName=te...)">
-                  </a> <!-- ValidateReportPage({emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, singleCoupon=12500, permitName=te...) -->
-                  <span class="method-name">ValidateReportPage</span>
-                  <span class="parameters">({emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, password=Osobase4@, emailAddress=base4jerry@gmail.com, invalidMultipleCouponQuantity=0, companyEmail=kagefe1978@ketchet.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidateSupportEmailEdit">
-                  </a> <!-- ValidateSupportEmailEdit -->
-                  <span class="method-name">ValidateSupportEmailEdit</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="ValidateSupportPhoneNumberEdit">
-                  </a> <!-- ValidateSupportPhoneNumberEdit -->
-                  <span class="method-name">ValidateSupportPhoneNumberEdit</span>
+                  <a name="ValidateCouponPage({invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=te...)">
+                  </a> <!-- ValidateCouponPage({invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=te...) -->
+                  <span class="method-name">ValidateCouponPage</span>
+                  <span class="parameters">({invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=test, lga=Amuwo-Odofin LGA, invalidPassword=OSOBASE4@, agentNoCoupon=jtest@gmail.com, agentsearch=Jerry, emailAddress=base4jerry@gmail.com, password=Osobase4@, invalidMultipleCouponQuantity=0, companyEmail=cobili4@hbehs.com, multipleCoupon=62500, invalidEmailResetPassword=jtest@gmail.com, companyPhoneNumber=84948940303})</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;this.driver&quot; is null
+	at pageObject.admin.AdminLogin.getEmailAddressField(AdminLogin.java:98)
+	at admin.AdminLoginTest2.ValidateSuccessfulAdminLogin(AdminLoginTest2.java:85)
+	at admin.CouponTest2.ValidateCouponPage(CouponTest2.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/8c/dvnzzls14cz6zpwnd_mwpvnh0000gn/T/testng-eclipse--1822844204/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/8c/dvnzzls14cz6zpwnd_mwpvnh0000gn/T/testng-eclipse--1000936719/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -359,7 +181,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;admin.SettingsTest&quot;/&gt;
+      &lt;class name=&quot;admin.CouponTest2&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -399,84 +221,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(18);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ValidateSupportPhoneNumberEdit')
-data.setCell(0, 2, 'admin.SettingsTest')
-data.setCell(0, 3, 6635);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'ValidateBusinessWebsiteEdit')
-data.setCell(1, 2, 'admin.SettingsTest')
-data.setCell(1, 3, 6492);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'ValidateSupportEmailEdit')
-data.setCell(2, 2, 'admin.SettingsTest')
-data.setCell(2, 3, 6460);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'ValidatePrimaryContactEmailEdit')
-data.setCell(3, 2, 'admin.SettingsTest')
-data.setCell(3, 3, 6389);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'ValidatePrimaryContactNameEdit')
-data.setCell(4, 2, 'admin.SettingsTest')
-data.setCell(4, 3, 6381);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'ValidatePrimaryContactPhoneNumberEdit')
-data.setCell(5, 2, 'admin.SettingsTest')
-data.setCell(5, 3, 6369);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'ValidateReportPage')
-data.setCell(6, 2, 'admin.SettingsTest')
-data.setCell(6, 3, 5497);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'ValidateBusinessAddressEdit')
-data.setCell(7, 2, 'admin.SettingsTest')
-data.setCell(7, 3, 4665);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'ValidateField')
-data.setCell(8, 2, 'admin.SettingsTest')
-data.setCell(8, 3, 838);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'InvalidSupportPhoneNumberFormat')
-data.setCell(9, 2, 'admin.SettingsTest')
-data.setCell(9, 3, 383);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'InvalidSupportPhoneNumberFormat')
-data.setCell(10, 2, 'admin.SettingsTest')
-data.setCell(10, 3, 286);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'InvalidSupportEmailFormat')
-data.setCell(11, 2, 'admin.SettingsTest')
-data.setCell(11, 3, 152);
-data.setCell(12, 0, 12)
-data.setCell(12, 1, 'InvalidSupportEmailFormat')
-data.setCell(12, 2, 'admin.SettingsTest')
-data.setCell(12, 3, 130);
-data.setCell(13, 0, 13)
-data.setCell(13, 1, 'InvalidPrimaryContactPhoneNumberFormat')
-data.setCell(13, 2, 'admin.SettingsTest')
-data.setCell(13, 3, 108);
-data.setCell(14, 0, 14)
-data.setCell(14, 1, 'InvalidPrimaryContactEmailFormat')
-data.setCell(14, 2, 'admin.SettingsTest')
-data.setCell(14, 3, 103);
-data.setCell(15, 0, 15)
-data.setCell(15, 1, 'InvalidPrimaryContactEmailFormat')
-data.setCell(15, 2, 'admin.SettingsTest')
-data.setCell(15, 3, 89);
-data.setCell(16, 0, 16)
-data.setCell(16, 1, 'ValidateBusinessNameEdit')
-data.setCell(16, 2, 'admin.SettingsTest')
-data.setCell(16, 3, 79);
-data.setCell(17, 0, 17)
-data.setCell(17, 1, 'InvalidPrimaryContactPhoneNumberFormat')
-data.setCell(17, 2, 'admin.SettingsTest')
-data.setCell(17, 3, 73);
+data.setCell(0, 1, 'ValidateCouponPage')
+data.setCell(0, 2, 'admin.CouponTest2')
+data.setCell(0, 3, 16544);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 51 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -502,86 +256,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">admin.SettingsTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">admin.CouponTest2</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">ValidateReportPage({emailNotFound=tryme@gmail.com, invalidEmailAddress=jerry@gmail.c, singleCoupon=12500, permitName=te...)</span>
-                <span class="method-start">14077 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ValidateField</span>
-                <span class="method-start">19584 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ValidateBusinessNameEdit</span>
-                <span class="method-start">20424 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ValidateBusinessAddressEdit</span>
-                <span class="method-start">20507 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidSupportPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</span>
-                <span class="method-start">25185 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidSupportPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</span>
-                <span class="method-start">25573 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ValidateSupportPhoneNumberEdit</span>
-                <span class="method-start">25863 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidSupportEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</span>
-                <span class="method-start">32508 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidSupportEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</span>
-                <span class="method-start">32640 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ValidateSupportEmailEdit</span>
-                <span class="method-start">32793 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ValidatePrimaryContactNameEdit</span>
-                <span class="method-start">39256 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</span>
-                <span class="method-start">45642 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidPrimaryContactPhoneNumberFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</span>
-                <span class="method-start">45753 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ValidatePrimaryContactPhoneNumberEdit</span>
-                <span class="method-start">45827 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ValidateBusinessWebsiteEdit</span>
-                <span class="method-start">52199 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidPrimaryContactEmailFormat({Invalidemailaddress=email.com, Invalidphonenumber=9593952048, invalidCoupon=okokooko})</span>
-                <span class="method-start">58692 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidPrimaryContactEmailFormat({Invalidemailaddress=email@gmail.c, Invalidphonenumber=9593952$4a4, invalidCoupon=okokooko1})</span>
-                <span class="method-start">58797 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">ValidatePrimaryContactEmailEdit</span>
-                <span class="method-start">58887 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ValidateCouponPage({invalidEmailAddress=jerry@gmail.c, emailNotFound=tryme@gmail.com, singleCoupon=12500, permitName=te...)</span>
+                <span class="method-start">13498 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">terminate</span>
-                <span class="method-start">65283 ms</span>
+                <span class="method-start">30109 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

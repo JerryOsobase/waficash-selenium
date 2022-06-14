@@ -36,7 +36,7 @@ public class AdminLoginTest extends base {
 		Assert.assertFalse(al.getContinueButton().isEnabled());
 	}
 	
-	@Test(priority=2, dataProvider="invalidGetData")
+	/*@Test(priority=2, dataProvider="invalidGetData")
 	public void InvalidEmailAddressNotFound(HashMap<String, String> data) throws InterruptedException {
 		//Check system response when user input a wrong email address not in the system
 		al = new AdminLogin(driver);
@@ -75,7 +75,7 @@ public class AdminLoginTest extends base {
 		al.getBackLink().click();
 		soft.assertTrue(al.getEmailAddressField().isDisplayed());
 		soft.assertAll();
-	}
+	}*/
 	
 	@Test(priority=6, dataProvider="mergedData")
 	public void ValidateSuccessfulAdminLogin(HashMap<String, String> data) throws InterruptedException {
@@ -144,11 +144,11 @@ public class AdminLoginTest extends base {
 	public  Object[][] getData() {
 		Object[][] data1=new Object[2][];
 		Map<String, String> validData = Map.of("emailAddress", "base4jerry@gmail.com", "password", "Osobase4@", "agentNoCoupon", "jtest@gmail.com", 
-				"lga", "Amuwo-Odofin LGA", "permitName", "test", "companyEmail", "kagefe1978@ketchet.com",
+				"lga", "Amuwo-Odofin LGA", "permitName", "test", "companyEmail", "cobili4@hbehs.com",
 				"companyPhoneNumber", "84948940303", "singleCoupon", "12500", "multipleCoupon", "62500", "agentsearch", "Jerry");
 		Map <String, String> dp1= new HashMap <>(validData);
 		Map<String, String> validData1 = Map.of("emailAddress", "base4jerry@gmail.com", "password", "Osobase4@", "agentNoCoupon", "jtest@gmail.com", 
-				"lga", "Yaba LCDA", "permitName", "online", "companyEmail", "kagefe1978@ketchet.co", 
+				"lga", "Yaba LCDA", "permitName", "online", "companyEmail", "cobili1284@hbehs.co", 
 				"companyPhoneNumber", "84948940399", "singleCoupon", "12500", "multipleCoupon", "62500", "agentsearch", "Chioma");
 		Map <String, String> dp3= new HashMap <>(validData1);
 		data1[0]= new Object[] { dp1 };

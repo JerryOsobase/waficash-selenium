@@ -31,9 +31,7 @@
     <classes>
      <class name="admin.AdminLoginTest"/> 
     <class name="admin.ForgotPasswordTest"/> 
-   <class name="admin.CouponTest"/> 
-      <class name="admin.IdentityTest"/>
-     <class name="admin.AddressTest"/> 
+   <class name="admin.CouponTest"/>
       <class name="admin.PermitTest">
       
        <methods>
@@ -47,6 +45,8 @@
       <class name="admin.PrintLicenseIdTest"/> 
        <class name="admin.ReportTest"/> 
        <class name="admin.SettingsTest"/> 
+       <class name="admin.UsersTest"/> 
+       
       
      
      </classes>

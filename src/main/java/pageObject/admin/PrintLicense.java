@@ -29,7 +29,7 @@ public WebDriver driver;
 	private By permitId = By.xpath("//tr/td[6]");
 	private By printIdButton = By.xpath("//button[text()=' Print ID ']");
 	private By printBulkButton = By.xpath("//button[text()=' Print Bulk ']");
-	private By searchField = By.xpath("//input[@placeholder='Search using name, email address or LSLB Permit Number...']");
+	private By searchField = By.xpath("//input[@placeholder='Search using name, email address']");
 	private By pageTab= By.cssSelector("ul[class*='customtab'] .nav-item");
 	private By tableHeader = By.xpath("//tr/th");
 	private By emptyApplicationText= By.xpath("//div[@class='text-center']/p");
