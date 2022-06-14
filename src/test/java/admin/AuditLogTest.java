@@ -113,7 +113,6 @@ public class AuditLogTest extends base {
 					"Request", "Print", "Reprint", "Edit"};
 			List<String> categoryTypeListArray= Arrays.asList(categoryTypeList);
 			Assert.assertEquals(categoryOptions, categoryTypeListArray);
-			System.out.println("jerry was here");
 	}
 	
 	@Test(priority=5)
