@@ -30,7 +30,7 @@ public class base {
 			// TODO Auto-generated method stub
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("use-fake-ui-for-media-stream");
-			System.setProperty("webdriver.chrome.driver", "//Users//jerryosobase//Applications//chromedriver");
+			System.setProperty("webdriver.chrome.driver", ""+System.getProperty("user.dir")+"//ChromeDriver//chromedriver"+"");
 			driver=new ChromeDriver(options);
 		}
 		

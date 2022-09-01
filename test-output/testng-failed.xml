@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="admin.CouponTest2">
+      <class name="admin.SubmitButtonTest">
         <methods>
-          <include name="ValidateCouponPage" invocation-numbers="0"/>
           <include name="initialize"/>
-          <include name="terminate"/>
+          <include name="buttonTest"/>
         </methods>
-      </class> <!-- admin.CouponTest2 -->
+      </class> <!-- admin.SubmitButtonTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
